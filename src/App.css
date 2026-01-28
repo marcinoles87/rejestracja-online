@@ -4,18 +4,6 @@
   box-sizing: border-box;
 }
 
-.container{
-  
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  background-color: beige;
-}
-
-.charts{
-  position: relative;
-}
 
 
 
