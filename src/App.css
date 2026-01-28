@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-log img{
+  height: 130px;
+}
+
 
 .nav-container ul{
   display: flex;
