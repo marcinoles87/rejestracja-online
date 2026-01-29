@@ -7,12 +7,19 @@
 .header-container{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  background-color: #1f09cb;
 }
 
-.header-log img{
+.header-logo img{
   height: 130px;
+}
+
+.main-container{
+  height: 60vh;
+  background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 1) 39%, rgba(255, 237, 74, 1) 100%);
 }
 
 
@@ -21,14 +28,18 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  
 
 }
 
 .nav-container ul li{
   font-size: 1.2rem;
   padding: 10px;
+  margin-right: 10px;
   text-decoration: none;
   list-style: none;
+  color: white;
+  border-right: 3px solid rgba(255, 255, 255, 0.455);
   
 }
 

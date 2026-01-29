@@ -1,6 +1,7 @@
 import React from 'react'
 
-import logo from '../img/logo.webp'
+import logo from '../img/logo.png'
+import Nav from '../components/Nav'
 
 function Header() {
   return (
@@ -11,7 +12,7 @@ function Header() {
         </div>
 
         <div className='header-info'>
-            <h1>Witamy w rejestracji TLK-MED</h1>
+            <Nav></Nav>
         </div>
         
 
