@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import {Routes,Route,Link} from 'react-router'
 
 
 function App() {
@@ -18,9 +19,26 @@ function App() {
 
     <div className="container">
 
-      <Header></Header>
-      <Main></Main>
-      <Footer></Footer>
+    <Routes>
+      
+
+      <Route path='*' element={
+        <>  
+        
+          <Header></Header>
+          <Main></Main>
+          <Footer></Footer>
+        </>
+     
+ 
+      }/>
+
+      
+      
+  
+    
+    </Routes>
+      
       
       
     </div>

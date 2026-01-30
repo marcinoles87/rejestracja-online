@@ -9,6 +9,9 @@ function Nav() {
                 <li>Informacje</li>
                 <li>Rejestracja</li>
                 <li>Cennik</li>
+                <li>Diagnostyka medyczna</li>
+                <li>Rehabilitacja</li>
+                <li>NFZ</li>
                 <li>Kontakt</li>
             </ul>
         </div>
