@@ -6,6 +6,8 @@ import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Main from './components/Main';
 import Footer from './components/Footer';
+import Info from './components/Info';
+
 import {Routes,Route,Link} from 'react-router'
 
 
@@ -27,11 +29,16 @@ function App() {
         
           <Header></Header>
           <Main></Main>
+          <Info></Info>
           <Footer></Footer>
         </>
+
      
  
       }/>
+
+      <Route path='/firma' element={<></>}></Route>
+
 
       
       
