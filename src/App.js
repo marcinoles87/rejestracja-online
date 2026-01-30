@@ -8,8 +8,11 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import Info from './components/Info';
 
-import {Routes,Route,Link} from 'react-router'
 
+import {Routes,Route,Link} from 'react-router'
+import Rejestracja from './pages/Rejestracja';
+import Cennik from './pages/Cennik';
+import Firma from './pages/Firma'
 
 function App() {
 
@@ -37,7 +40,11 @@ function App() {
  
       }/>
 
-      <Route path='/firma' element={<></>}></Route>
+      <Route path='/firma' element={<Firma></Firma>}></Route>
+      <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}></Route>
+      <Route path='/cennik' element={<Cennik></Cennik>}></Route>
+      <Route path='/diagnostyka' element={<></>}></Route>
+      <Route path='/nfz' element={<></>}></Route>
 
 
       

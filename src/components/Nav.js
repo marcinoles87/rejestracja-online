@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 function Nav() {
   return (
@@ -6,7 +7,7 @@ function Nav() {
 
         <div className='nav-elements'>
             <ul>
-                <li>Informacje</li>
+                <li><Link to={'/firma'}>Firma</Link></li>
                 <li>Rejestracja</li>
                 <li>Cennik</li>
                 <li>Diagnostyka medyczna</li>
