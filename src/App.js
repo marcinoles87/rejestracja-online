@@ -13,6 +13,9 @@ import {Routes,Route,Link} from 'react-router'
 import Rejestracja from './pages/Rejestracja';
 import Cennik from './pages/Cennik';
 import Firma from './pages/Firma'
+import Diagnostyka from './pages/Diagnostyka';
+import Nfz from './pages/Nfz';
+import Rehabilitacja from './pages/Rehabilitacja';
 
 function App() {
 
@@ -43,8 +46,9 @@ function App() {
       <Route path='/firma' element={<Firma></Firma>}></Route>
       <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}></Route>
       <Route path='/cennik' element={<Cennik></Cennik>}></Route>
-      <Route path='/diagnostyka' element={<></>}></Route>
-      <Route path='/nfz' element={<></>}></Route>
+      <Route path='/diagnostyka' element={<Diagnostyka></Diagnostyka>}></Route>
+      <Route path='/nfz' element={<Nfz></Nfz>}></Route>
+      <Route path='/rehabilitacja' element={<Rehabilitacja></Rehabilitacja>}></Route>
 
 
       

@@ -8,11 +8,11 @@ function Nav() {
         <div className='nav-elements'>
             <ul>
                 <li><Link to={'/firma'}>Firma</Link></li>
-                <li>Rejestracja</li>
-                <li>Cennik</li>
-                <li>Diagnostyka medyczna</li>
-                <li>Rehabilitacja</li>
-                <li>NFZ</li>
+                <li><Link to={'/rejestracja'}>Rejestracja</Link></li>
+                <li><Link to={'/diagnostyka'}>Diagnostyka</Link></li>
+                <li><Link to={'/rehabilitacja'}>Rehabilitacja</Link></li>
+                <li><Link to={'/nfz'}>NFZ</Link></li>
+                
                 <li>Kontakt</li>
             </ul>
         </div>
