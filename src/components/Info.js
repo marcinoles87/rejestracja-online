@@ -13,6 +13,15 @@ function Info() {
           <p>Zasubskrybuj nasz newsletter i bądź wśród pierwszych osób, które powiadomimy o nowych trasach i ofertach specjalnych.</p>
           <input type="text" placeholder='Imię'></input>
           <input type="text" placeholder='Email'></input>
+            <br></br>
+
+          <label for="">
+            <input type="checkbox"></input>
+            Wyrażam zgode na otrzymywanie informacji handlowych od Firmy TLK-MED
+          </label>
+          
+          <p></p>
+
         </div>
     </div>
   )
