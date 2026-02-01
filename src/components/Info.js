@@ -24,7 +24,7 @@ function Info() {
             Wyrażam zgode na otrzymywanie informacji handlowych od Firmy TLK-MED
           </label>
           
-          <button>Zasubskrybuj</button>
+          <button>Subskrybuj</button>
 
         </div>
     </div>
