@@ -83,15 +83,20 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
 }
 
 .info-container{
-  margin-top:100px ;
+  display: flex;
+  flex-direction: row;
+  margin:100px 50px;
+  
+  border: 1px solid grey;
+  border-radius: 15px;
 }
 
 .info-banner{
   display: flex;
   flex-direction: row;
-  margin: 50px;
   background-color: white;
   border-radius: 10px;
+  overflow: hidden;
 
 }
 
