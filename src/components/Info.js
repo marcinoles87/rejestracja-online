@@ -11,16 +11,20 @@ function Info() {
         <div className='info-text'>
           <h1>Bądz na bieżąco</h1>
           <p>Zasubskrybuj nasz newsletter i bądź wśród pierwszych osób, które powiadomimy o nowych trasach i ofertach specjalnych.</p>
-          <input type="text" placeholder='Imię'></input>
+
+          <div>
+             <input type="text" placeholder='Imię'></input>
           <input type="text" placeholder='Email'></input>
-            <br></br>
+
+          </div>
+         
 
           <label for="">
             <input type="checkbox"></input>
             Wyrażam zgode na otrzymywanie informacji handlowych od Firmy TLK-MED
           </label>
           
-          <p></p>
+          <button>Zasubskrybuj</button>
 
         </div>
     </div>
