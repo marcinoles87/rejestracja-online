@@ -13,14 +13,14 @@ const zabiegi = [
     } ,
 
     {
-        name:'Zabiegi fizioterapeutyczne',
+        name:'Masaż',
         description:'lorem ipsum ',
         zdjecie:zdj1,
         price:'od 244zł'
     } ,
 
     {
-        name:'Zabiegi fizioterapeutyczne',
+        name:'SOLUX x KINEZO x KRIO',
         description:'lorem ipsum ',
         zdjecie:zdj1,
         price:'od 244zł'
