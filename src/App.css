@@ -7,7 +7,9 @@
 
 :root{
   --main-color : #00108a;
+  --text-color : rgb(86, 86, 86);
   --inputs-border : rgb(80, 80, 80);
+
 }
 
 .header-container{
@@ -154,6 +156,41 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
 
 .info-text button:hover{
   background-color: #031cda;
+}
+
+.zabiegi-items{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.zabieg{
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 30vw;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,.12);
+  overflow: hidden;
+}
+
+.zabieg h1{
+  padding: 10px;
+  color: var(--main-color);
+}
+
+.zabieg p{
+  padding: 10px;
+  color: var(--inputs-border);
+  
+
+}
+
+.zabieg img{
+  width: 100%;
+  height: 40vh;
+  object-fit:cover;
 }
 
 

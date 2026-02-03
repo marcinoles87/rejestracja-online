@@ -7,7 +7,7 @@ function Zabiegi() {
 const zabiegi = [
     {
         name:'Zabiegi fizioterapeutyczne',
-        description:'lorem ipsum ',
+        description:'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
         zdjecie:zdj1,
         price:'od 244zł'
     } ,
@@ -35,8 +35,8 @@ const zabiegi = [
                 return(
                     
                     <div className='zabieg' key={index}>
-                        <h1>{item.name}</h1>
                         <img src={item.zdjecie} alt={item.name}></img>
+                        <h1>{item.name}</h1>
                         <p>{item.description}</p>
                         <p>{item.price}</p>
                     </div>

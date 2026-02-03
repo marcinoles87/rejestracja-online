@@ -16,6 +16,7 @@ import Firma from './pages/Firma'
 import Diagnostyka from './pages/Diagnostyka';
 import Nfz from './pages/Nfz';
 import Rehabilitacja from './pages/Rehabilitacja';
+import Zabiegi from './pages/Zabiegi';
 
 function App() {
 
@@ -36,6 +37,7 @@ function App() {
           <Header></Header>
           <Main></Main>
           <Info></Info>
+          <Zabiegi></Zabiegi>
           <Footer></Footer>
         </>
 
