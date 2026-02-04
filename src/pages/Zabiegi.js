@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router'
 
 import zdj1 from '../img/reha_1.png'
 import zdj2 from '../img/reha_2.png'
@@ -12,21 +13,24 @@ const zabiegi = [
         name:'Zabiegi fizioterapeutyczne',
         description:'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
         zdjecie:zdj1,
-        price:'od 244zł'
+        price:'od 244zł',
+        link:'fizio'
     } ,
 
     {
         name:'Masaż',
         description:'lorem ipsum ',
         zdjecie:zdj2,
-        price:'od 244zł'
+        price:'od 244zł',
+        link:'masaz'
     } ,
 
     {
         name:'SOLUX x KINEZO x KRIO',
         description:'lorem ipsum ',
         zdjecie:zdj3,
-        price:'od 244zł'
+        price:'od 244zł',
+        link:'solux'
     }
     
 ]
@@ -37,12 +41,14 @@ const zabiegi = [
             {zabiegi.map( (item , index) => {
                 return(
                     
+                    <Link to={'/'+item.link}>
                     <div className='zabieg' key={index}>
                         <img src={item.zdjecie} alt={item.name}></img>
                         <h1>{item.name}</h1>
                         <p>{item.description}</p>
                         <p style={{textAlign:'right'}}><span style={{fontSize:'2rem' , fontWeight:'bold' , color:'blue'}}>{item.price}</span></p>
                     </div>
+                    </Link>
 
 
                 
