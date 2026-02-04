@@ -1,6 +1,9 @@
 import React from 'react'
 
-import zdj1 from '../img/main.jpeg'
+import zdj1 from '../img/reha_1.png'
+import zdj2 from '../img/reha_2.png'
+import zdj3 from '../img/reha_3.png'
+
 
 function Zabiegi() {
 
@@ -15,14 +18,14 @@ const zabiegi = [
     {
         name:'Masaż',
         description:'lorem ipsum ',
-        zdjecie:zdj1,
+        zdjecie:zdj2,
         price:'od 244zł'
     } ,
 
     {
         name:'SOLUX x KINEZO x KRIO',
         description:'lorem ipsum ',
-        zdjecie:zdj1,
+        zdjecie:zdj3,
         price:'od 244zł'
     }
     
