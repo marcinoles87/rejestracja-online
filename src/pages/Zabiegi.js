@@ -11,7 +11,7 @@ function Zabiegi() {
 const zabiegi = [
     {
         name:'Zabiegi fizioterapeutyczne',
-        description:'lorem ipsum lorem ipsum lorem ipsum lorem ipsum ',
+        description:'Rehabilitacja to proces medyczny, którego celem jest przywrócenie lub poprawa sprawności fizycznej, psychicznej i społecznej osoby po urazach, chorobach lub operacjach.  ',
         zdjecie:zdj1,
         price:'od 244zł',
         link:'fizio'
@@ -19,7 +19,7 @@ const zabiegi = [
 
     {
         name:'Masaż',
-        description:'lorem ipsum ',
+        description:'Rehabilitacja to proces medyczny, którego celem jest przywrócenie lub poprawa sprawności fizycznej, psychicznej i społecznej osoby po urazach, chorobach lub operacjach.  ',
         zdjecie:zdj2,
         price:'od 244zł',
         link:'masaz'
@@ -27,7 +27,7 @@ const zabiegi = [
 
     {
         name:'SOLUX x KINEZO x KRIO',
-        description:'lorem ipsum ',
+        description:'Rehabilitacja to proces medyczny, którego celem jest przywrócenie lub poprawa sprawności fizycznej, psychicznej i społecznej osoby po urazach, chorobach lub operacjach.  ',
         zdjecie:zdj3,
         price:'od 244zł',
         link:'solux'
