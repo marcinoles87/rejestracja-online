@@ -11,7 +11,7 @@ function Zabiegi() {
 const zabiegi = [
     {
         name:'Zabiegi fizioterapeutyczne',
-        description:'Rehabilitacja to proces medyczny, którego celem jest przywrócenie lub poprawa sprawności fizycznej, psychicznej i społecznej osoby po urazach, chorobach lub operacjach.  ',
+        description:'Rehabilitacja to proces leczenia, którego celem jest przywrócenie sprawności po chorobie, urazie lub operacji. Pomaga zmniejszyć ból, poprawić ruchomość i umożliwia powrót do codziennego funkcjonowania.  ',
         zdjecie:zdj1,
         price:'od 244zł',
         link:'fizio'
@@ -45,7 +45,7 @@ const zabiegi = [
                     <div className='zabieg' key={index}>
                         <img src={item.zdjecie} alt={item.name}></img>
                         <h1>{item.name}</h1>
-                        <p>{item.description}</p>
+                        <p>{item.description.slice(0,80)}...</p>
                         <p style={{textAlign:'right'}}><span style={{fontSize:'2rem' , fontWeight:'bold' , color:'blue'}}>{item.price}</span></p>
                     </div>
                     </Link>
