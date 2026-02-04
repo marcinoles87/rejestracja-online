@@ -17,6 +17,9 @@ import Diagnostyka from './pages/Diagnostyka';
 import Nfz from './pages/Nfz';
 import Rehabilitacja from './pages/Rehabilitacja';
 import Zabiegi from './pages/Zabiegi';
+import Fizio from './pages/Fizio';
+import Masaz from './pages/Masaz';
+import Solux from './pages/Solux';
 
 function App() {
 
@@ -51,6 +54,9 @@ function App() {
       <Route path='/diagnostyka' element={<Diagnostyka></Diagnostyka>}></Route>
       <Route path='/nfz' element={<Nfz></Nfz>}></Route>
       <Route path='/rehabilitacja' element={<Rehabilitacja></Rehabilitacja>}></Route>
+      <Route path='/fizio' element={<Fizio></Fizio>}></Route>
+      <Route path='/masaz' element={<Masaz></Masaz>}></Route>
+      <Route path='/solux' element={<Solux></Solux>}></Route>
 
 
       
