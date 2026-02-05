@@ -183,6 +183,11 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
 
 .zabiegi-items a{
   text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.zabiegi-items a:hover{
+  transform: scale(1.02);
 }
 
 .zabieg h1{
