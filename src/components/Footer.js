@@ -26,20 +26,18 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale�
         <div className='footer-items'>
 
           <div className='footer-adres'>
-            <p>Recepcja TLK MED</p>
+              <p><strong>Recepcja TLK MED</strong></p>
               <p>+48 (12) 294 18 45</p>
-              <p>+48 (12) 294 20 83</p>
-              <p>Rejestracja do działu Fizjoterapii Ambulatoryjnej (NFZ):</p>
-              <p>Poniedziałek - Piątek: 10.00 - 20.00</p>
-              <p>Administracja TLK MED Sp.z.o.o</p>
+              <p>+48 (12) 294 20 83</p><br></br>
+              <p><strong>Administracja TLK MED Sp.z.o.o</strong></p>
               <p>ul. Cystersów 16</p>
               <p>31-553 Kraków</p>
-              <p>tlkmed@tlkmed.com.pl</p>
-              <p>Biuro Dyrekcji</p>
+              <p>tlkmed@tlkmed.com.pl</p><br></br>
+              <p><strong>Biuro Dyrekcji</strong></p>
               <p>sekretariat@tlkmed.com.pl</p>
               <p>+ 48 (12) 294 18 45 ext. 106</p>
-              <p>fax ext. 100</p>
-              <p>Księgowość</p>
+              <p>fax ext. 100</p><br></br>
+              <p><strong>Księgowość</strong></p>
               <p>t.ciacma@tlkmed.com.pl  </p>
               <p>+ 48 (12) 294 18 45 ext. 105 </p>
               
@@ -49,6 +47,8 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale�
               <p>Godziny otwarcia: </p>
               <p>Poniedziałek - Piątek: 8.00 - 20.00</p>
               <p>Sobota: 8.00 - 14.00</p>
+              <p>Rejestracja do działu Fizjoterapii Ambulatoryjnej (NFZ):</p>
+              <p>Poniedziałek - Piątek: 10.00 - 20.00</p>
 
           </div>
 
