@@ -158,9 +158,12 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   background-color: #031cda;
 }
 
+
+
 .zabiegi-items{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
 }
@@ -170,9 +173,11 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   flex-direction: column;
   justify-content: left;
   width: 30vw;
+  margin: 5px;
   border-radius: 15px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,.12);
   overflow: hidden;
+
 }
 
 .zabiegi-items a{
