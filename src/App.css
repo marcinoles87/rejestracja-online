@@ -205,7 +205,7 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
 }
 
 .footer-container{
-
+  height: 60vh;
   background-image: url('./img/gabinet_1.jpeg');
   background-position: center;
   background-size: cover;
@@ -217,10 +217,23 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  height: 100%;
   margin-top: 20px;
   background-color: rgba(29, 88, 166, 0.701);
   color:white;
   text-align: center;
+}
+
+.footer-mapa{
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}
+
+.footer-mapa img{
+  width: 300px;
+  height: 250px;
+  object-fit: cover;
 }
 
 
