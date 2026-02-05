@@ -204,6 +204,26 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   object-position: 50% 100%;
 }
 
+.footer-container{
+
+  background-image: url('./img/gabinet_1.jpeg');
+  background-position: center;
+  background-size: cover;
+}
+
+
+.footer-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  background-color: rgba(29, 88, 166, 0.701);
+  color:white;
+  text-align: center;
+}
+
+
 
 
 
