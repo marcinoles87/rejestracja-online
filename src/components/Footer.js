@@ -44,7 +44,7 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale≈
 
           </div>
           <div className='footer-godziny'>
-              <p>Godziny otwarcia: </p>
+              <p><strong>Godziny otwarcia: </strong></p>
               <p>Poniedzia≈Çek - PiƒÖtek: 8.00 - 20.00</p>
               <p>Sobota: 8.00 - 14.00</p>
               <p>Rejestracja do dzia≈Çu Fizjoterapii Ambulatoryjnej (NFZ):</p>
@@ -53,7 +53,10 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale≈
           </div>
 
           <div className='footer-mapa'>
-            <img src={mapa} alt='mapa'></img>
+            
+            <a href="https://www.bing.com/maps/search?name=TLK+MED+Sp+z+oo&trfc=&mepi=139%7E%7EEmbedded%7ELargeMapLink&FORM=MPSRPL&style=r&q=TLK+MED+Sp+z+oo&ss=id.ypid%3AYN7998x503682856&ppois=50.06463623046875_19.970081329345703_TLK+MED+Sp+z+oo&cp=50.064636%7E19.970081&lvl=15">
+              <img src={mapa} alt='mapa'></img>
+            </a>
           </div>
         </div>
     </div>
