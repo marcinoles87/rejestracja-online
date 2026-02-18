@@ -269,6 +269,24 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   text-align: center;
 }
 
+.rejestracja-kalendarz{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.dzien{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid gray;
+  padding: 4px;
+}
+
+.green{
+  background-color: green;
+}
+
 
 
 

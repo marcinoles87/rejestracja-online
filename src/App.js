@@ -25,9 +25,6 @@ import Specjalisci from './pages/Specjalisci';
 function App() {
 
 
-  
-
-
   return (
 
     <div className="container">
@@ -43,11 +40,14 @@ function App() {
           <Info></Info>
           <Zabiegi></Zabiegi>
           <Footer></Footer>
+          
+          
         </>
 
      
  
       }/>
+
 
       <Route path='/firma' element={<Firma></Firma>}></Route>
       <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}></Route>
@@ -58,11 +58,6 @@ function App() {
       <Route path='/fizio' element={<Fizio></Fizio>}></Route>
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
-      <Route path='/specjal' element={<Specjalisci></Specjalisci>}></Route>
-
-      
-      
-  
     
     </Routes>
       
