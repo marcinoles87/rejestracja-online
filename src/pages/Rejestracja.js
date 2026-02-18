@@ -35,6 +35,9 @@ function Rejestracja() {
               <li>Data</li>
               <li>Pokój</li>
               <li>Doktor</li>
+
+              <p style={{width:'10px',height:'10px',backgroundColor:'green'}}></p>
+              <p>wolne</p>
             </ul>
 
           </div>
