@@ -16,7 +16,7 @@ function Rejestracja() {
   const handleClick = (e) =>{
 
     const element = e.target
-    element.classList.add=('green')
+    element.classList.toggle('green')
     
   }
   
