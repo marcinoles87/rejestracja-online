@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link, Route, Routes } from 'react-router'
+import Main from '../components/Main.js'
+
 
 function Rejestracja() {
 
@@ -24,8 +26,6 @@ function Rejestracja() {
 
     
 
-  <Routes>
-    <Route path='*' element={
        <div className='rejestracja-container'>
           <div className='rejestracja-nav-left'>
             <p>Menu</p>
@@ -35,12 +35,17 @@ function Rejestracja() {
               <li>Data</li>
               <li>Pokój</li>
               <li>Doktor</li>
+              <Link to={'/main'}>Main</Link>
 
               <p style={{width:'10px',height:'10px',backgroundColor:'green'}}></p>
               <p>wolne</p>
             </ul>
 
           </div>
+
+          <Routes>
+            <Route path='/main' element={<Main></Main>}></Route>
+          </Routes>
 
           <div className='rejestracja-kalendarz'>
             {tablica.map( (item,index) =>{
@@ -53,14 +58,8 @@ function Rejestracja() {
           </div>
 
     </div>
-    }>
+  
 
-    </Route>
-
-
-
-    
-  </Routes>
    
   )
 }
