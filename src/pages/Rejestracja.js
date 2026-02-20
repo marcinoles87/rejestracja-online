@@ -13,19 +13,16 @@ function Rejestracja() {
 
        <div className='rejestracja-container'>
           <div className='rejestracja-nav-left'>
-            <p>Menu</p>
-            <ul>
-              <li>Dzien</li>
-              <li>Wynik</li>
-              <li>Data</li>
-              <li>Pokój</li>
-              <li>Doktor</li>
+            <p><strong>Menu</strong></p>
+            
+              
+              <Link to={'/rejestracja/pokoje'}>Pokoje zabiegowe</Link>
               <Link to={'/rejestracja/miesiac'}>Rejestracja miesieczna</Link>
 
               <p style={{width:'10px',height:'10px',backgroundColor:'green'}}></p>
               <p>wolne</p>
               
-            </ul>
+            
 
           </div>
           <Outlet /> 

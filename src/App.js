@@ -22,6 +22,7 @@ import Masaz from './pages/Masaz';
 import Solux from './pages/Solux';
 import Specjalisci from './pages/Specjalisci';
 import Miesiac from './pages/Miesiac';
+import Pokoje from './pages/Pokoje';
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
       <Route path='/firma' element={<Firma></Firma>}></Route>
       <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}>
         <Route path='miesiac' element={<Miesiac></Miesiac>}></Route>
+        <Route path='pokoje' element={<Pokoje></Pokoje>}></Route>
       
       </Route>
       <Route path='/cennik' element={<Cennik></Cennik>}></Route>
