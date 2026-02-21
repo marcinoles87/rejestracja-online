@@ -13,7 +13,7 @@ function Nav() {
                 <li><Link to={'/rehabilitacja'}>Rehabilitacja</Link></li>
                 <li><Link to={'/nfz'}>NFZ</Link></li>
                 
-                <li>Kontakt</li>
+                <li><a href="#footer">Kontakt</a></li>
             </ul>
         </div>
         

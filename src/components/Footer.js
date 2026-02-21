@@ -23,7 +23,7 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale�
 
 - wyszukać adresata wpisując: tlkmed</p> */}
 
-        <div className='footer-items'>
+        <div className='footer-items' id='footer'>
 
           <div className='footer-adres'>
               <p><strong>Recepcja TLK MED</strong></p>
