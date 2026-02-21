@@ -281,6 +281,7 @@ background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(50, 240, 129, 
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 70%;
 }
 
 .dzien{
