@@ -321,6 +321,30 @@
     border: none;
   }
 
+  .zabiegi-items{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .zabieg{
+    width: 100%;
+  }
+
+  .footer-container{
+    height: auto;
+  }
+
+  .footer-items{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-godziny{
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
   
 
 
