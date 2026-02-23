@@ -28,10 +28,11 @@
 .main-container{
   height: 60vh; 
  background: 
-        linear-gradient(rgba(0, 248, 116, 0.5), rgba(254, 180, 123, 0.5)),
+        linear-gradient(rgba(173, 12, 119, 0.5), rgba(0, 255, 26, 0.5)),
         url('./img/gabinet_1.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     
 }
 
@@ -301,6 +302,31 @@
   background-color: green;
 }
 
+
+
+
+@media screen and (max-width:461px) {
+  
+  .header-container{
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-elements ul{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements ul li{
+    border: none;
+  }
+
+  
+
+
+
+  
+}
 
 
 
