@@ -39,7 +39,8 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale�
               <p>fax ext. 100</p><br></br>
               <p><strong>Księgowość</strong></p>
               <p>t.ciacma@tlkmed.com.pl  </p>
-              <p>+ 48 (12) 294 18 45 ext. 105 </p>
+              <p>+ 48 (12) 294 18 45 ext. 105 </p> <br></br>
+             
               
 
           </div>
@@ -48,7 +49,7 @@ W celu przekazania pisma do TLK MED Sp z o.o., po zalogowaniu do platformy nale�
               <p>Poniedziałek - Piątek: 8.00 - 20.00</p>
               <p>Sobota: 8.00 - 14.00</p>
               <p>Rejestracja do działu Fizjoterapii Ambulatoryjnej (NFZ):</p>
-              <p>Poniedziałek - Piątek: 10.00 - 20.00</p>
+              <p>Poniedziałek - Piątek: 10.00 - 20.00</p><br></br>
 
           </div>
 
