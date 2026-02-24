@@ -315,6 +315,24 @@
     flex-direction: column;
   }
 
+  .main-container{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .main-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: inherit;
+    font-size:medium;
+    }
+
+    .info-container{
+      margin: auto;
+    }
+
   .nav-elements ul{
     display: flex;
     flex-direction: column;

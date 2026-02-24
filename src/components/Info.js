@@ -19,7 +19,7 @@ function Info() {
           </div>
          
 
-          <label for="">
+          <label htmlFor="">
             <input type="checkbox"></input>
             Wyrażam zgode na otrzymywanie informacji handlowych od Firmy TLK-MED
           </label>

@@ -50,8 +50,8 @@ const zabiegi = [
             {zabiegi.map( (item , index) => {
                 return(
                     
-                    <Link to={'/'+item.link}>
-                    <div className='zabieg' key={index}>
+                    <Link to={'/'+item.link} key={index}>
+                    <div className='zabieg'>
                         <img src={item.zdjecie} alt={item.name}></img>
                         <h1>{item.name}</h1>
                         <p>{item.description.slice(0,80)}...</p>

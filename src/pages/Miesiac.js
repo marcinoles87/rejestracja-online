@@ -14,10 +14,15 @@ function Miesiac() {
     }
   ];
 
+  const monthName = ['styczeń','luty','marzec','kwiecien','maj','czerwiec','lipiec','sierpien','wrzesien','pazdziernik','listopad','grudzien']
+
   const imiona = ['ola','ala']
+
+
 
   for(let i = 0 ; i <= iloscDni ; i++){
     tablica.push({dzien:i , osoba1:imiona[0] , osoba2:imiona[1]})
+    Array(1).push({dzien:i , osoba1:imiona[0] , osoba2:imiona[1]})
   }
 
   const handleClick = (e) =>{
@@ -27,6 +32,7 @@ function Miesiac() {
     
   }
   return (
+
     
          <div className='rejestracja-kalendarz'>
             {tablica.map( (item,index) =>{
