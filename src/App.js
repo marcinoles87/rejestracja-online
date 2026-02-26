@@ -23,6 +23,7 @@ import Solux from './pages/Solux';
 import Specjalisci from './pages/Specjalisci';
 import Miesiac from './pages/Miesiac';
 import Pokoje from './pages/Pokoje';
+import Dzien from './pages/Dzien';
 
 function App() {
 
@@ -64,6 +65,7 @@ function App() {
       <Route path='/fizio' element={<Fizio></Fizio>}></Route>
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
+      <Route path='/dzien' element={<Dzien></Dzien>}></Route>
     
     </Routes>
       
