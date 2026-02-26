@@ -1,4 +1,5 @@
 import React from 'react'
+import Dzien from './Dzien';
 
 function Miesiac() {
 
@@ -16,7 +17,7 @@ function Miesiac() {
 
   const monthName = ['styczeń','luty','marzec','kwiecien','maj','czerwiec','lipiec','sierpien','wrzesien','pazdziernik','listopad','grudzien']
 
-  const imiona = ['ola','ala']
+  const imiona = ['ola','ala','io', 'ml','st','tk','pn']
 
 
 
@@ -38,10 +39,9 @@ function Miesiac() {
             {tablica.map( (item,index) =>{
               return(
                 
+
                 <div className='dzien' key={index} onClick={handleClick}>
-                  <p>{item.dzien}</p>
-                  <p>{item.osoba1}</p>
-                  <p>{item.osoba2}</p>
+                  <Dzien item={item}>Dzien</Dzien>
                 </div>
               
               )
