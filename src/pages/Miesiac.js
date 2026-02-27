@@ -4,9 +4,13 @@ import { Link } from 'react-router';
 
 function Miesiac() {
 
+  
+
   const data = new Date()
   const month = data.getMonth()+1
   const iloscDni = 30
+
+
 
   const tablica = [
     {
@@ -43,7 +47,7 @@ function Miesiac() {
                 
 
                 <div className='dzien' key={index} onClick={handleClick}>
-                  <Link to={'/dzien'}>Dzień {item.dzien}</Link>
+                  <Link to={'/dzien'}>Dzień  {item.dzien}</Link>
                 </div>
               
               )

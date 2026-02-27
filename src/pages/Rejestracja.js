@@ -23,6 +23,7 @@ function Rejestracja() {
               <p> <span style={{width:'25px',height:'10px',backgroundColor:'green'}}>w</span> - wolne</p>
               <p> <span style={{width:'25px',height:'10px',backgroundColor:'red'}}>z</span> - zajete</p>
               
+              
             
 
           </div>
