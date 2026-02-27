@@ -1,10 +1,10 @@
 import React from 'react'
 
-function Dzien({item}) {
-  console.log(item)
+function Dzien({osoby}) {
+  
   return (
     <div>Dzien
-        {item}
+        {osoby}
     </div>
   )
 }

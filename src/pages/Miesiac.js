@@ -2,9 +2,9 @@ import React from 'react'
 import Dzien from './Dzien';
 import { Link } from 'react-router';
 
-function Miesiac() {
+function Miesiac({osoby,setOsoby}) {
 
-  
+  console.log(osoby,setOsoby)
 
   const data = new Date()
   const month = data.getMonth()+1
@@ -33,6 +33,9 @@ function Miesiac() {
   }
 
   const handleClick = (e) =>{
+
+        osoby.push(imiona)
+
 
     const element = e.target
     element.classList.toggle('green')
