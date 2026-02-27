@@ -2,7 +2,7 @@ import React from 'react'
 import Dzien from './Dzien';
 import { Link } from 'react-router';
 
-function Miesiac() {
+function Miesiac({setTablica}) {
 
 
   const data = new Date()
@@ -22,7 +22,7 @@ function Miesiac() {
 
   const monthName = ['styczeń','luty','marzec','kwiecien','maj','czerwiec','lipiec','sierpien','wrzesien','pazdziernik','listopad','grudzien']
 
-  const imiona = ['ola','ala','io', 'ml','st','tk','pn']
+  const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss']
 
 
 
@@ -33,6 +33,7 @@ function Miesiac() {
 
   const handleClick = (e) =>{
 
+    setTablica(tablica)
     console.log(tablica)
     const element = e.target
     element.classList.toggle('green')

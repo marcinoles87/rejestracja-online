@@ -36,6 +36,14 @@
     
 }
 
+.dzien-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 10px;
+}
+
 
 .nav-container ul{
   display: flex;

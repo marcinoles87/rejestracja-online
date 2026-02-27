@@ -27,7 +27,7 @@ import Dzien from './pages/Dzien';
 
 function App() {
 
-  const [osoby , setOsoby] = useState([])
+  const [tablica , setTablica] = useState([])
 
 
   return (
@@ -56,7 +56,7 @@ function App() {
 
       <Route path='/firma' element={<Firma></Firma>}></Route>
       <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}>
-        <Route path='miesiac' element={<Miesiac></Miesiac>}></Route>
+        <Route path='miesiac' element={<Miesiac setTablica={setTablica}></Miesiac>}></Route>
         <Route path='pokoje' element={<Pokoje></Pokoje>}></Route>
       
       </Route>
@@ -67,7 +67,7 @@ function App() {
       <Route path='/fizio' element={<Fizio></Fizio>}></Route>
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
-      <Route path='/dzien' element={<Dzien></Dzien>}></Route>
+      <Route path='/dzien' element={<Dzien tablica={tablica}></Dzien>}></Route>
     
     </Routes>
       

@@ -1,10 +1,16 @@
 import React from 'react'
 
-function Dzien({osoby}) {
+function Dzien({tablica}) {
   
   return (
-    <div>Dzien
-        {osoby}
+    <div className='dzien-container'>Dzien
+        {tablica.map( (item,index) => {
+          return(
+            <div key={index}>
+            {item.osoba1}
+            </div>
+          )
+        })}
     </div>
   )
 }
