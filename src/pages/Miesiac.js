@@ -2,9 +2,8 @@ import React from 'react'
 import Dzien from './Dzien';
 import { Link } from 'react-router';
 
-function Miesiac({osoby,setOsoby}) {
+function Miesiac() {
 
-  console.log(osoby,setOsoby)
 
   const data = new Date()
   const month = data.getMonth()+1
@@ -27,16 +26,14 @@ function Miesiac({osoby,setOsoby}) {
 
 
 
-  for(let i = 1 ; i <= iloscDni ; i++){
-    tablica.push({dzien:i , osoba1:imiona[0] , osoba2:imiona[1] , miesiac:monthName[i]})
-    Array(1).push({dzien:i , osoba1:imiona[0] , osoba2:imiona[1]})
+  for(let i = 0 ; i <= iloscDni ; i++){
+    tablica.push({dzien:i , osoba1:imiona[i] , osoba2:imiona[i] , miesiac:monthName[i]})
+    Array(1).push({dzien:i , osoba1:imiona[i] , osoba2:imiona[i]})
   }
 
   const handleClick = (e) =>{
 
-        osoby.push(imiona)
-
-
+    console.log(tablica)
     const element = e.target
     element.classList.toggle('green')
     
@@ -50,7 +47,7 @@ function Miesiac({osoby,setOsoby}) {
                 
 
                 <div className='dzien' key={index} onClick={handleClick}>
-                  <Link to={'/dzien'}>Dzień  {item.dzien}</Link>
+                  <Link to={'/dzien'}>Dzień  {item.dzien} </Link>
                 </div>
               
               )
