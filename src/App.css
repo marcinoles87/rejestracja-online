@@ -44,6 +44,10 @@
   margin: 10px;
 }
 
+.dzien-container table th{
+  padding:15px;
+}
+
 
 .nav-container ul{
   display: flex;

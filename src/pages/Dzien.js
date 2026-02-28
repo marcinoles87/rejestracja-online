@@ -4,7 +4,7 @@ function Dzien({tablica}) {
 
   const dzienMiesiaca = []
 
-  for( let i = 0 ; i <=31 ; i++ ){
+  for( let i = 8 ; i <=20 ; i++ ){
     dzienMiesiaca.push(i)
   }
   
