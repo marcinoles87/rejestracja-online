@@ -7,12 +7,20 @@ function Dzien({tablica}) {
   for( let i = 8 ; i <=20 ; i++ ){
     dzienMiesiaca.push(i)
   }
+
+  const handleDelete = (e) =>{
+    // const element = document.querySelector(e)
+    console.log(e.target)
+    e.target.textContent=''
+    e.target.style.backgroundColor='green'
+  }
   
   return (
     <div className='dzien-container'>Dzien
 
-     <table>
-      {tablica.map( (item,index) => {
+     <table onClick={handleDelete}>
+      <tr>
+        {tablica.map( (item,index) => {
         return(
           <>
           <th></th>
@@ -22,11 +30,22 @@ function Dzien({tablica}) {
           
         )
       })}
+      </tr>
+      
 
        {dzienMiesiaca.map( (item,index) =>{
         return(
           <>
-          <tr>{item}</tr>
+          <tr>{item}
+            {tablica.map((item,index)=>{
+              return(
+               <>
+              <td>{item}</td>
+              </> 
+              )
+              
+            })}
+          </tr>
           </>
         )
        })}
