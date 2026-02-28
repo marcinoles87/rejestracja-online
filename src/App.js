@@ -29,6 +29,18 @@ function App() {
 
   const [tablica , setTablica] = useState([])
 
+    const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
+
+    useEffect( () => {
+      
+      setTablica(imiona)
+
+    },[])
+
+    console.log(tablica)
+
+
+
 
   return (
 
