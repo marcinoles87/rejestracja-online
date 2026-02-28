@@ -20,10 +20,11 @@ function Dzien({tablica}) {
 
      <table onClick={handleDelete}>
       <tr>
+        <th></th>
         {tablica.map( (item,index) => {
         return(
           <>
-          <th></th>
+          
           
           <th>{item}</th>
           </>

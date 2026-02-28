@@ -48,6 +48,10 @@
   padding:15px;
 }
 
+.dzien-container table tr td{
+  padding: 15px;
+}
+
 
 .nav-container ul{
   display: flex;
