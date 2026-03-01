@@ -33,7 +33,7 @@ function Grafik({setTablica}) {
 
   const handleClick = (e) =>{
 
-    setTablica(tablica)
+    // setTablica(tablica)
     console.log(tablica)
     const element = e.target
     element.classList.toggle('green')
