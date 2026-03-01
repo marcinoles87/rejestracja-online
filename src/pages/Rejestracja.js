@@ -17,7 +17,8 @@ function Rejestracja() {
             
               
               <Link to={'/rejestracja/pokoje'}>Pokoje zabiegowe</Link>
-              <Link to={'/rejestracja/miesiac'}>Rejestracja miesieczna</Link>
+              <Link to={'/rejestracja/grafik'}>Grafik miesieczny</Link>
+              <Link to={'/rejestracja/personel'}>Personel</Link>
 
               <p ></p>
               <p> <span style={{width:'25px',height:'10px',backgroundColor:'green'}}>w</span> - wolne</p>

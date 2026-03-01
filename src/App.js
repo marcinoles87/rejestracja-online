@@ -21,9 +21,10 @@ import Fizio from './pages/Fizio';
 import Masaz from './pages/Masaz';
 import Solux from './pages/Solux';
 import Specjalisci from './pages/Specjalisci';
-import Miesiac from './pages/Miesiac';
 import Pokoje from './pages/Pokoje';
 import Dzien from './pages/Dzien';
+import Personel from './pages/Personel';
+import Grafik from './pages/Grafik';
 
 function App() {
 
@@ -68,8 +69,9 @@ function App() {
 
       <Route path='/firma' element={<Firma></Firma>}></Route>
       <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}>
-        <Route path='miesiac' element={<Miesiac setTablica={setTablica}></Miesiac>}></Route>
+        <Route path='grafik' element={<Grafik setTablica={setTablica}></Grafik>}></Route>
         <Route path='pokoje' element={<Pokoje></Pokoje>}></Route>
+        <Route path='personel' element={<Personel></Personel>}></Route>
       
       </Route>
       <Route path='/cennik' element={<Cennik></Cennik>}></Route>

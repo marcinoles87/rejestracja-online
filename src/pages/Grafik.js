@@ -2,7 +2,7 @@ import React from 'react'
 import Dzien from './Dzien';
 import { Link } from 'react-router';
 
-function Miesiac({setTablica}) {
+function Grafik({setTablica}) {
 
 
   const data = new Date()
@@ -58,4 +58,4 @@ function Miesiac({setTablica}) {
   )
 }
 
-export default Miesiac
+export default Grafik
