@@ -1,22 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Dzien({tablica}) {
 
-  const dzienMiesiaca = []
+  const [kolor,setKolor] = useState()
+
+
+  const godzina = []
 
   for( let i = 8 ; i <=20 ; i++ ){
-    dzienMiesiaca.push(i)
+    godzina.push(i)
   }
 
   const handleDelete = (e) =>{
     // const element = document.querySelector(e)
     console.log(e.target)
-    e.target.textContent=''
-    e.target.style.backgroundColor='green'
+    e.target.style.backgroundColor= kolor
+  }
+
+  const handleNieobecnosc = (e) =>{
+    setKolor('red')
+    e.target.style.backgroundColor=kolor
+  }
+
+  const handleObecnosc = (e) =>{
+    setKolor('green')
+    e.target.style.backgroundColor=kolor
   }
   
   return (
     <div className='dzien-container'>Dzien
+
+    <button onClick={handleNieobecnosc}>Nieobecność</button>
+    <button onClick={handleObecnosc}>Obecnosc</button>
 
      <table onClick={handleDelete}>
       <tr>
@@ -34,7 +49,7 @@ function Dzien({tablica}) {
       </tr>
       
 
-       {dzienMiesiaca.map( (item,index) =>{
+       {godzina.map( (item,index) =>{
         return(
           <>
           <tr>{item}

@@ -44,12 +44,28 @@
   margin: 10px;
 }
 
+.dzien-container table{
+  width: 100%;
+}
+
+.dzien-container button{
+  width: 120px;
+  border-radius: 10px;
+  background-color: #00108a;
+  color:white;
+  padding: 5px;
+  margin: 10px;
+}
+
 .dzien-container table th{
   padding:15px;
 }
 
 .dzien-container table tr td{
   padding: 15px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  text-align: center;
 }
 
 
