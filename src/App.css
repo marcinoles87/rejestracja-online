@@ -51,10 +51,16 @@
 .dzien-container button{
   width: 120px;
   border-radius: 10px;
-  background-color: #00108a;
+  background-color: #00108a !important;
   color:white;
   padding: 5px;
   margin: 10px;
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+
+.dzien-container button:hover{
+  transform: scale(1.1);
 }
 
 .dzien-container table th{

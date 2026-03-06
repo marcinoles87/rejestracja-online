@@ -65,6 +65,8 @@ function Dzien({tablica}) {
           </>
         )
        })}
+
+      
       
      </table>
         
