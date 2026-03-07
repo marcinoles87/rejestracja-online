@@ -49,13 +49,13 @@ function Grafik({setTablica}) {
                 
 
                 <div className='dzien' key={index} onClick={handleClick}>
+                  
                   <Link to={'/dzien'}>Dzień  {item.dzien} </Link>
                 </div>
               
               )
             })}
 
-            <Personel></Personel>
           </div>
 
 
