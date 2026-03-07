@@ -1,6 +1,7 @@
 import React from 'react'
 import Dzien from './Dzien';
 import { Link } from 'react-router';
+import Personel from './Personel';
 
 function Grafik({setTablica}) {
 
@@ -53,7 +54,11 @@ function Grafik({setTablica}) {
               
               )
             })}
+
+            <Personel></Personel>
           </div>
+
+
   
   )
 }
