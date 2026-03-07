@@ -4,6 +4,7 @@ function Dzien({tablica}) {
 
   const [kolor,setKolor] = useState()
 
+  console.log(tablica)
 
   const godzina = []
 

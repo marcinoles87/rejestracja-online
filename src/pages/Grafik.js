@@ -8,16 +8,15 @@ function Grafik({setTablica}) {
 
   const data = new Date()
   const month = data.getMonth()+1
-  const iloscDni = 30
+  const iloscDni = 31
 
 
 
-  const tablica = [
+  const tablicaPracownikow = [
     {
       dzien:'',
       osoba1:'',
-      osoba2:'',
-      miesiac:''
+    
     }
   ];
 
@@ -27,28 +26,20 @@ function Grafik({setTablica}) {
 
 
 
-  for(let i = 0 ; i <= iloscDni ; i++){
-    tablica.push({dzien:i , osoba1:imiona[i] , osoba2:imiona[i] , miesiac:monthName[i]})
-    Array(1).push({dzien:i , osoba1:imiona[i] , osoba2:imiona[i]})
+  for(let i = 1 ; i <= iloscDni ; i++){
+    tablicaPracownikow.push({dzien:i , osoba1:imiona[i]})
   }
 
-  const handleClick = (e) =>{
-
-    // setTablica(tablica)
-    console.log(tablica)
-    const element = e.target
-    element.classList.toggle('green')
-    
-  }
+ 
   return (
 
     
          <div className='rejestracja-kalendarz'>
-            {tablica.map( (item,index) =>{
+            {tablicaPracownikow.map( (item,index) =>{
               return(
                 
 
-                <div className='dzien' key={index} onClick={handleClick}>
+                <div className='dzien' key={index} >
                   
                   <Link to={'/dzien'}>Dzień  {item.dzien} </Link>
                 </div>
