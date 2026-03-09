@@ -70,7 +70,13 @@ function Dzien({tablica}) {
        })}
 
        <tr>Suma 
-        
+        {tablica.map( (item,index) =>{
+          return(
+            <>
+            <tr>{item.iloscGodzin}h</tr>
+            </>
+          )
+        })}
        </tr>
 
       
