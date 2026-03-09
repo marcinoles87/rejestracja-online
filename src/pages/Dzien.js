@@ -12,6 +12,8 @@ function Dzien({tablica}) {
     godzina.push(i)
   }
 
+  
+
   const handleDelete = (e) =>{
     // const element = document.querySelector(e)
     console.log(e.target)
@@ -66,6 +68,10 @@ function Dzien({tablica}) {
           </>
         )
        })}
+
+       <tr>Suma 
+        
+       </tr>
 
       
       

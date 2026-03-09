@@ -16,6 +16,8 @@ function Grafik({setTablica}) {
     {
       dzien:'',
       osoba1:'',
+      zmiana:'',
+      iloscGodzin:'',
     
     }
   ];
