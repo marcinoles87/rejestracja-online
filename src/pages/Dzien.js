@@ -73,7 +73,7 @@ function Dzien({tablica}) {
         {tablica.map( (item,index) =>{
           return(
             <>
-            <tr>{item.iloscGodzin}h</tr>
+            <td>{item.iloscGodzin}h</td>
             </>
           )
         })}
