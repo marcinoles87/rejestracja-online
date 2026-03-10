@@ -8,7 +8,7 @@ function Grafik({setTablica}) {
 
   const data = new Date()
   const month = data.getMonth()+1
-  const iloscDni = 31
+  const iloscMiesiecy = 12
 
 
 
@@ -17,6 +17,8 @@ function Grafik({setTablica}) {
       dzien:'',
       osoba1:'',
       zmiana:'',
+      startZmiany:'',
+      koniecZmiany:'',
       iloscGodzin:'',
     
     }
@@ -28,7 +30,7 @@ function Grafik({setTablica}) {
 
 
 
-  for(let i = 1 ; i <= iloscDni ; i++){
+  for(let i = 1 ; i <= iloscMiesiecy-1 ; i++){
     tablicaPracownikow.push({dzien:i , osoba1:imiona[i]})
   }
 
@@ -43,7 +45,7 @@ function Grafik({setTablica}) {
 
                 <div className='dzien' key={index} >
                   
-                  <Link to={'/dzien'}>Dzień  {item.dzien} </Link>
+                  <Link to={'/dzien'}> {monthName[index]} </Link>
                 </div>
               
               )
