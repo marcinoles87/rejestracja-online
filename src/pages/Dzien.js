@@ -8,7 +8,7 @@ function Dzien({tablica}) {
 
   const godzina = []
 
-  for( let i = 8 ; i <=20 ; i++ ){
+  for( let i = 1 ; i <=31-1 ; i++ ){
     godzina.push(i)
   }
 
@@ -59,7 +59,9 @@ function Dzien({tablica}) {
             {tablica.map((item,index)=>{
               return(
                <>
-              <td>{item}</td>
+              <td>
+                <input placeholder='zmiana'></input>
+              </td>
               </> 
               )
               
