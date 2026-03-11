@@ -15,7 +15,6 @@ function Dzien({tablica}) {
   
 
   const handleDelete = (e) =>{
-    // const element = document.querySelector(e)
     console.log(e.target)
     e.target.style.backgroundColor= kolor
   }
