@@ -32,11 +32,27 @@ function App() {
 
     const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
 
+     const pracownicy = [
+      {
+        imie:'ola',
+        nazwisko:'nowak',
+      },
+      {
+        imie:'paweł',
+        nazwisko:'krak'
+      }
+    ]
+
+    console.log(pracownicy)
+
     useEffect( () => {
       
       setTablica(imiona)
 
     },[])
+
+
+   
 
   return (
 
@@ -76,7 +92,7 @@ function App() {
       <Route path='/fizio' element={<Fizio></Fizio>}></Route>
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
-      <Route path='/dzien' element={<Dzien tablica={tablica}></Dzien>}></Route>
+      <Route path='/dzien' element={<Dzien tablica={tablica} pracownicy={pracownicy}></Dzien>}></Route>
     
     </Routes>
       

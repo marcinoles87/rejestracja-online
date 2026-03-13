@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
 
-function Dzien({tablica}) {
+function Dzien({tablica,pracownicy}) {
 
   const [kolor,setKolor] = useState()
+
+  console.log(pracownicy[0])
+  console.log(pracownicy[1])
 
 
   const godzina = []
@@ -37,12 +40,12 @@ function Dzien({tablica}) {
      <table onClick={handleDelete}>
       <tr>
         <th></th>
-        {tablica.map( (item,index) => {
+        {pracownicy.map( (item,index) => {
         return(
           <>
           
           
-          <th>{item}</th>
+          <th>{item.imie} {item.nazwisko}</th>
           </>
           
         )
