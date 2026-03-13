@@ -8,14 +8,13 @@ function Dzien({tablica,pracownicy}) {
   console.log(pracownicy[1])
 
 
-  const godzina = []
+  const dzienMiesiaca = []
 
   for( let i = 1 ; i <=31-1 ; i++ ){
-    godzina.push(i)
+    dzienMiesiaca.push(i)
   }
 
   
-
   const handleDelete = (e) =>{
     console.log(e.target)
     e.target.style.backgroundColor= kolor
@@ -38,49 +37,38 @@ function Dzien({tablica,pracownicy}) {
     <button onClick={handleObecnosc}>Obecnosc</button>
 
      <table onClick={handleDelete}>
+      
       <tr>
-        <th></th>
+        
         {pracownicy.map( (item,index) => {
         return(
           <>
-          
-          
           <th>{item.imie} {item.nazwisko}</th>
           </>
           
         )
       })}
       </tr>
-      
 
-       {godzina.map( (item,index) =>{
+      
+        {dzienMiesiaca.map( (item,index) => {
         return(
           <>
-          <tr>{item}
-            {tablica.map((item,index)=>{
-              return(
-               <>
-              <td>
-                <input placeholder='zmiana'></input>
-              </td>
-              </> 
-              )
-              
-            })}
+          <tr>
+            {item}
           </tr>
           </>
+          
         )
-       })}
+      })}
+        
+      
+      
+      
+      
+      
 
-       <tr>Suma 
-        {tablica.map( (item,index) =>{
-          return(
-            <>
-            <td>{item.iloscGodzin}h</td>
-            </>
-          )
-        })}
-       </tr>
+       
 
       
       
