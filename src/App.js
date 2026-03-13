@@ -38,11 +38,6 @@ function App() {
 
     },[])
 
-    console.log(tablica)
-
-
-
-
   return (
 
     <div className="container">
