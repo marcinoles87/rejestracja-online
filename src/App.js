@@ -30,16 +30,7 @@ function App() {
 
   const [tablica , setTablica] = useState([])
 
-    const imiona = [
-      {
-          dzien:'',
-          osoba1:'',
-          zmiana:'',
-          startZmiany:'',
-          koniecZmiany:'',
-          iloscGodzin:'',
-      }
-    ]
+    const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
 
     useEffect( () => {
       
