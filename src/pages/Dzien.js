@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 function Dzien({tablica,pracownicy}) {
 
   const [kolor,setKolor] = useState()
+  const [zmiana,setZmiana] = useState()
 
   console.log(pracownicy[0])
   console.log(pracownicy[1])
@@ -15,6 +16,9 @@ function Dzien({tablica,pracownicy}) {
   }
 
 
+  const handleAdd = (e) => {
+    
+  }
   const handleNieobecnosc = (e) =>{
     setKolor('red')
     e.target.style.backgroundColor=kolor
@@ -51,11 +55,11 @@ function Dzien({tablica,pracownicy}) {
         return(
           <>
           <tr>
-            <td>{item}</td>
+            <td>{item} dzien</td>
             {pracownicy.map( (item,index) => {
               return(
                 <>
-                <td>{item.zmiana}</td>
+                <td><input onChange={ (e) => setZmiana(e.target.value)}></input>{zmiana}</td>
                 </>
               )
             })}
