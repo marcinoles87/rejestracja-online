@@ -36,10 +36,12 @@ function App() {
       {
         imie:'ola',
         nazwisko:'nowak',
+        zmiana:'8-12'
       },
       {
         imie:'paweł',
-        nazwisko:'krak'
+        nazwisko:'krak',
+        zmiana:'14-20'
       }
     ]
 

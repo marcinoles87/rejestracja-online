@@ -14,11 +14,6 @@ function Dzien({tablica,pracownicy}) {
     dzienMiesiaca.push(i)
   }
 
-  
-  const handleDelete = (e) =>{
-    console.log(e.target)
-    e.target.style.backgroundColor= kolor
-  }
 
   const handleNieobecnosc = (e) =>{
     setKolor('red')
@@ -36,9 +31,10 @@ function Dzien({tablica,pracownicy}) {
     <button onClick={handleNieobecnosc}>Nieobecność</button>
     <button onClick={handleObecnosc}>Obecnosc</button>
 
-     <table onClick={handleDelete}>
+     <table>
       
       <tr>
+        <td>Dzień</td>
         
         {pracownicy.map( (item,index) => {
         return(
@@ -55,12 +51,23 @@ function Dzien({tablica,pracownicy}) {
         return(
           <>
           <tr>
-            {item}
+            <td>{item}</td>
+            {pracownicy.map( (item,index) => {
+              return(
+                <>
+                <td>{item.zmiana}</td>
+                </>
+              )
+            })}
+          
           </tr>
           </>
           
+          
         )
       })}
+
+      
         
       
       
