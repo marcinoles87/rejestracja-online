@@ -3,7 +3,9 @@ import React, { useState } from 'react'
 function Dzien({tablica,pracownicy}) {
 
   const [kolor,setKolor] = useState()
-  const [zmiana,setZmiana] = useState()
+  const [zmianaStart,setStart] = useState()
+  const [zmianaKoniec,setKoniec] = useState()
+  const [sumaGodzinZmiany,setSumaGodzinZmiany] = useState()
 
   console.log(pracownicy[0])
   console.log(pracownicy[1])
@@ -16,7 +18,9 @@ function Dzien({tablica,pracownicy}) {
   }
 
 
-  const handleAdd = (e) => {
+
+  const handlePodsumuj = (e) => {
+    setSumaGodzinZmiany(zmianaKoniec-zmianaStart)
     
   }
   const handleNieobecnosc = (e) =>{
@@ -34,6 +38,7 @@ function Dzien({tablica,pracownicy}) {
 
     <button onClick={handleNieobecnosc}>Nieobecność</button>
     <button onClick={handleObecnosc}>Obecnosc</button>
+    <button onClick={handlePodsumuj}>Podsumuj godziny</button>
 
      <table>
       
@@ -59,7 +64,11 @@ function Dzien({tablica,pracownicy}) {
             {pracownicy.map( (item,index) => {
               return(
                 <>
-                <td><input onChange={ (e) => setZmiana(e.target.value)}></input>{zmiana}</td>
+                <td>
+                  <input className='input-table' placeholder='start' onChange={ (e) => setStart(e.target.value)}></input>-
+                  <input className='input-table' placeholder='koniec' onChange={ (e) => setKoniec(e.target.value)}></input>
+                  <p>{zmianaStart}-{zmianaKoniec} ilość godzin : {sumaGodzinZmiany}</p>
+                  </td>
                 </>
               )
             })}
