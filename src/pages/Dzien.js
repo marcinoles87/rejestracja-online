@@ -34,11 +34,15 @@ function Dzien({tablica,pracownicy}) {
   }
   
   return (
-    <div className='dzien-container'>Dzien
+    <div className='dzien-container'>
 
-    <button onClick={handleNieobecnosc}>Nieobecność</button>
-    <button onClick={handleObecnosc}>Obecnosc</button>
-    <button onClick={handlePodsumuj}>Podsumuj godziny</button>
+      <div className='dzien-buttons'>
+          <button onClick={handleNieobecnosc}>Nieobecność</button>
+          <button onClick={handleObecnosc}>Obecnosc</button>
+          <button onClick={handlePodsumuj}>Podsumuj godziny</button>
+      </div>
+
+   
 
      <table>
       

@@ -1,6 +1,5 @@
 
 import './App.css';
-import axios from 'axios';
 
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
@@ -9,7 +8,7 @@ import Footer from './components/Footer';
 import Info from './components/Info';
 
 
-import {Routes,Route,Link} from 'react-router'
+import {Routes,Route} from 'react-router'
 import Rejestracja from './pages/Rejestracja';
 import Cennik from './pages/Cennik';
 import Firma from './pages/Firma'
@@ -36,12 +35,14 @@ function App() {
       {
         imie:'ola',
         nazwisko:'nowak',
-        zmiana:'8-12'
+        zmianaStart:'',
+        zmianaKoniec:'',
       },
       {
         imie:'paweł',
         nazwisko:'krak',
-        zmiana:'14-20'
+        zmianaStart:'',
+        zmianaKoniec:'',
       }
     ]
 
@@ -95,6 +96,7 @@ function App() {
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
       <Route path='/dzien' element={<Dzien tablica={tablica} pracownicy={pracownicy}></Dzien>}></Route>
+      <Route path='/specjaliscie' element={<Specjalisci></Specjalisci>}></Route>
     
     </Routes>
       
