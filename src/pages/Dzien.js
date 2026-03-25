@@ -4,28 +4,16 @@ function Dzien({tablica,pracownicy,setTablica}) {
 
   const [kolor,setKolor] = useState()
   const [shifts,setShifts] = useState()
-  const [formData,setFormData] = useState({imie:'',start:'',koniec:''})
+  const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
   
- 
-
-  console.log(pracownicy[0])
-  console.log(pracownicy[1])
-
 
   
 
-  const handleDelete = () =>{
+  const handleDelete = (e) =>{
+    console.log(e.target)
 
   }
 
-  const handleAddPracownik = () =>{
-    
-    const newTablica = []
-    setTablica([...pracownicy,newTablica])
-    newTablica.push({id:'3',imie:'xxx'})    
-    console.log(newTablica)
-
-  }
 
   const handleChange = (e) =>{
 
@@ -38,6 +26,12 @@ function Dzien({tablica,pracownicy,setTablica}) {
     })
 
     console.log(formData)
+  }
+
+  const handleAdd = (e) =>{
+    e.preventDefault()
+    setTablica( prevUsers => [...prevUsers,formData])
+    
   }
   
   const handleNieobecnosc = (e) =>{
@@ -61,14 +55,13 @@ function Dzien({tablica,pracownicy,setTablica}) {
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
       <h1>Grafik Pracowników 📅</h1>
       <ul>
-        {pracownicy.map((shift) => (
+        {tablica.map((shift) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
-            <strong>{shift.imie}</strong> : {shift.start} — {shift.koniec}
+            <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec}
             <button onClick={handleDelete}>Usun</button>
           </li>
         ))}
       </ul>
-      <button onClick={handleAddPracownik}>Dodaj pracownika</button>
     </div>
 
    <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
@@ -87,7 +80,7 @@ function Dzien({tablica,pracownicy,setTablica}) {
       <input type="number" name='koniec'  value={formData.koniec} onChange={handleChange} placeholder='koniec zmiany'></input>
      </div>
 
-     <button>Dodaj</button>
+     <button onClick={handleAdd}>Dodaj</button>
 
    </form>
 

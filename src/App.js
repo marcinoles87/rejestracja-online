@@ -34,7 +34,7 @@ function App() {
     
     ]
 
-  const [tablica , setTablica] = useState(pracownicy)
+  const [tablica , setTablica] = useState()
 
     const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
 
