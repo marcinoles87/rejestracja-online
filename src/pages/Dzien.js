@@ -4,10 +4,13 @@ function Dzien({tablica,pracownicy,setTablica}) {
 
   const [kolor,setKolor] = useState()
   const [shifts,setShifts] = useState()
+  const [formData,setFormData] = useState({imie:'',start:'',koniec:''})
+  
  
 
   console.log(pracownicy[0])
   console.log(pracownicy[1])
+
 
   
 
@@ -16,9 +19,11 @@ function Dzien({tablica,pracownicy,setTablica}) {
   }
 
   const handleAddPracownik = () =>{
-    set
-    nowaZmiana.push({id:'3',imie:'adam'})
     
+    const newTablica = []
+    setTablica([...pracownicy,newTablica])
+    newTablica.push({id:'3',imie:'xxx'})    
+    console.log(newTablica)
 
   }
   
@@ -52,6 +57,26 @@ function Dzien({tablica,pracownicy,setTablica}) {
       </ul>
       <button onClick={handleAddPracownik}>Dodaj pracownika</button>
     </div>
+
+   <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
+     <div>
+      <label>Pracownik</label>
+      <input type="text" placeholder='nazwa'></input>
+     </div>
+
+     <div>
+      <label>Start</label>
+      <input type="time" placeholder='start zmiany'></input>
+     </div>
+    
+    <div>
+     <label>Koniec</label>
+      <input type="time" placeholder='koniec zmiany'></input>
+     </div>
+
+     <button>Dodaj</button>
+
+   </form>
 
         
 

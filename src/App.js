@@ -27,16 +27,18 @@ import Grafik from './pages/Grafik';
 
 function App() {
 
-  const [tablica , setTablica] = useState([])
-
-    const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
-
-     const pracownicy = [
+   const pracownicy = [
 
       {id:'1',imie:'ola nowak',start:'8',koniec:'16'},
       {id:'2',imie:'paweł krk',start:'16',koniec:'20'}
     
     ]
+
+  const [tablica , setTablica] = useState(pracownicy)
+
+    const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
+
+    
 
     console.log(pracownicy)
 
