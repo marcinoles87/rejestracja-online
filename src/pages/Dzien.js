@@ -26,6 +26,15 @@ function Dzien({tablica,pracownicy,setTablica}) {
     console.log(newTablica)
 
   }
+
+  const handleChange = (e) =>{
+    
+    const {name,value} = e.target
+    setFormData({
+      ...formData,
+      [name]:value
+    })
+  }
   
   const handleNieobecnosc = (e) =>{
     setKolor('red')
@@ -61,17 +70,17 @@ function Dzien({tablica,pracownicy,setTablica}) {
    <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
      <div>
       <label>Pracownik</label>
-      <input type="text" placeholder='nazwa'></input>
+      <input type="text" name='pracownik' value={formData.pracownik} onChange={handleChange} placeholder='nazwa'></input>
      </div>
 
      <div>
       <label>Start</label>
-      <input type="time" placeholder='start zmiany'></input>
+      <input type="number" name='start'  value={formData.start} onChange={handleChange} placeholder='start zmiany'></input>
      </div>
     
     <div>
      <label>Koniec</label>
-      <input type="time" placeholder='koniec zmiany'></input>
+      <input type="number" name='koniec'  value={formData.koniec} onChange={handleChange} placeholder='koniec zmiany'></input>
      </div>
 
      <button>Dodaj</button>
