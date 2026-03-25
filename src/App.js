@@ -87,7 +87,7 @@ function App() {
       <Route path='/fizio' element={<Fizio></Fizio>}></Route>
       <Route path='/masaz' element={<Masaz></Masaz>}></Route>
       <Route path='/solux' element={<Solux></Solux>}></Route>
-      <Route path='/dzien' element={<Dzien tablica={tablica} pracownicy={pracownicy}></Dzien>}></Route>
+      <Route path='/dzien' element={<Dzien tablica={tablica} pracownicy={pracownicy} setTablica={setTablica}></Dzien>}></Route>
       <Route path='/specjaliscie' element={<Specjalisci></Specjalisci>}></Route>
     
     </Routes>

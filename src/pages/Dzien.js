@@ -1,30 +1,27 @@
 import React, { useState } from 'react'
 
-function Dzien({tablica,pracownicy}) {
+function Dzien({tablica,pracownicy,setTablica}) {
 
   const [kolor,setKolor] = useState()
-  const [zmianaStart,setStart] = useState()
-  const [zmianaKoniec,setKoniec] = useState()
-  const [sumaGodzinZmiany,setSumaGodzinZmiany] = useState()
+  const [shifts,setShifts] = useState()
+ 
 
   console.log(pracownicy[0])
   console.log(pracownicy[1])
 
   
 
+  const handleDelete = () =>{
 
-  const dzienMiesiaca = []
-
-  for( let i = 1 ; i <=31-1 ; i++ ){
-    dzienMiesiaca.push(i)
   }
 
-
-
-  const handlePodsumuj = (e) => {
-    setSumaGodzinZmiany(zmianaKoniec-zmianaStart)
+  const handleAddPracownik = () =>{
+    set
+    nowaZmiana.push({id:'3',imie:'adam'})
     
+
   }
+  
   const handleNieobecnosc = (e) =>{
     setKolor('red')
     e.target.style.backgroundColor=kolor
@@ -41,7 +38,6 @@ function Dzien({tablica,pracownicy}) {
       <div className='dzien-buttons'>
           <button onClick={handleNieobecnosc}>Nieobecność</button>
           <button onClick={handleObecnosc}>Obecnosc</button>
-          <button onClick={handlePodsumuj}>Podsumuj godziny</button>
       </div>
 
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
@@ -50,9 +46,11 @@ function Dzien({tablica,pracownicy}) {
         {pracownicy.map((shift) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
             <strong>{shift.imie}</strong> : {shift.start} — {shift.koniec}
+            <button onClick={handleDelete}>Usun</button>
           </li>
         ))}
       </ul>
+      <button onClick={handleAddPracownik}>Dodaj pracownika</button>
     </div>
 
         
