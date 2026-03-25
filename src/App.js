@@ -32,18 +32,10 @@ function App() {
     const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
 
      const pracownicy = [
-      {
-        imie:'ola',
-        nazwisko:'nowak',
-        zmianaStart:'',
-        zmianaKoniec:'',
-      },
-      {
-        imie:'paweł',
-        nazwisko:'krak',
-        zmianaStart:'',
-        zmianaKoniec:'',
-      }
+
+      {id:'1',imie:'ola nowak',zmianaStart:'8',zmianaKoniec:'16'},
+      {id:'2',imie:'paweł krk',zmianaStart:'16',zmianaKoniec:'20'}
+    
     ]
 
     console.log(pracownicy)

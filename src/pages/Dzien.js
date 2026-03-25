@@ -10,6 +10,8 @@ function Dzien({tablica,pracownicy}) {
   console.log(pracownicy[0])
   console.log(pracownicy[1])
 
+  
+
 
   const dzienMiesiaca = []
 
@@ -68,7 +70,7 @@ function Dzien({tablica,pracownicy}) {
             {pracownicy.map( (item,index) => {
               return(
                 <>
-                <td>
+                <td key={index}>
                   <input className='input-table' placeholder='start' onChange={ (e) => setStart(e.target.value)}></input>-
                   <input className='input-table' placeholder='koniec' onChange={ (e) => setKoniec(e.target.value)}></input>
                   <p>{zmianaStart}-{zmianaKoniec} ilość godzin : {sumaGodzinZmiany}</p>
