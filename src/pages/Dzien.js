@@ -5,6 +5,8 @@ function Dzien({tablica,pracownicy,setTablica}) {
   const [kolor,setKolor] = useState()
   const [shifts,setShifts] = useState()
   const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
+
+  console.log(tablica)
   
 
   
@@ -34,23 +36,12 @@ function Dzien({tablica,pracownicy,setTablica}) {
     
   }
   
-  const handleNieobecnosc = (e) =>{
-    setKolor('red')
-    e.target.style.backgroundColor=kolor
-  }
-
-  const handleObecnosc = (e) =>{
-    setKolor('green')
-    e.target.style.backgroundColor=kolor
-  }
+ 
   
   return (
     <div className='dzien-container'>
 
-      <div className='dzien-buttons'>
-          <button onClick={handleNieobecnosc}>Nieobecność</button>
-          <button onClick={handleObecnosc}>Obecnosc</button>
-      </div>
+     
 
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
       <h1>Grafik Pracowników 📅</h1>

@@ -29,12 +29,12 @@ function App() {
 
    const pracownicy = [
 
-      {id:'1',imie:'ola nowak',start:'8',koniec:'16'},
-      {id:'2',imie:'paweł krk',start:'16',koniec:'20'}
+      {id:'1',pracownik:'ola nowak',start:'8',koniec:'16'},
+      {id:'2',pracownik:'paweł krk',start:'16',koniec:'20'}
     
     ]
 
-  const [tablica , setTablica] = useState()
+  const [tablica , setTablica] = useState(pracownicy)
 
     const imiona = ['ola','ala','io', 'ml','st','tk','pn','xx','wk','pn','mr','ss' , 'sw' , 'io']
 
@@ -44,7 +44,7 @@ function App() {
 
     useEffect( () => {
       
-      setTablica(imiona)
+      setTablica(pracownicy)
 
     },[])
 
