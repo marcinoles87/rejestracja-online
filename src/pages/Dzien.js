@@ -44,67 +44,19 @@ function Dzien({tablica,pracownicy}) {
           <button onClick={handlePodsumuj}>Podsumuj godziny</button>
       </div>
 
-   
-
-     <table>
-      
-      <tr>
-        <td>Dzień</td>
-        
-        {pracownicy.map( (item,index) => {
-        return(
-          <>
-          <th>{item.imie} {item.nazwisko}</th>
-          </>
-          
-        )
-      })}
-      </tr>
-
-      
-        {dzienMiesiaca.map( (item,index) => {
-        return(
-          <>
-          <tr>
-            <td>{item} dzien</td>
-            {pracownicy.map( (item,index) => {
-              return(
-                <>
-                <td key={index}>
-                  <input className='input-table' placeholder='start' onChange={ (e) => setStart(e.target.value)}></input>-
-                  <input className='input-table' placeholder='koniec' onChange={ (e) => setKoniec(e.target.value)}></input>
-                  <p>{zmianaStart}-{zmianaKoniec} ilość godzin : {sumaGodzinZmiany}</p>
-                  </td>
-                </>
-              )
-            })}
-          
-          </tr>
-          </>
-          
-          
-        )
-      })}
-
-      
-        
-      
-      
-      
-      
-      
-
-       
-
-      
-      
-     </table>
-        
-
-
-       
+      <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+      <h1>Grafik Pracowników 📅</h1>
+      <ul>
+        {pracownicy.map((shift) => (
+          <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
+            <strong>{shift.imie}</strong> : {shift.start} — {shift.koniec}
+          </li>
+        ))}
+      </ul>
+    </div>
 
         
+
     </div>
   )
 }

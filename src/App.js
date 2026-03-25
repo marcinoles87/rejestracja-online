@@ -33,8 +33,8 @@ function App() {
 
      const pracownicy = [
 
-      {id:'1',imie:'ola nowak',zmianaStart:'8',zmianaKoniec:'16'},
-      {id:'2',imie:'paweł krk',zmianaStart:'16',zmianaKoniec:'20'}
+      {id:'1',imie:'ola nowak',start:'8',koniec:'16'},
+      {id:'2',imie:'paweł krk',start:'16',koniec:'20'}
     
     ]
 
