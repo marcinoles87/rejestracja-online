@@ -62,6 +62,7 @@ function App() {
 
    <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
      <div>
+      <h1>Dodaj pracownika do zmiany</h1>
       <label>Pracownik</label>
       <input type="text" name='pracownik' value={formData.pracownik} onChange={handleChange} placeholder='nazwa'></input>
      </div>
