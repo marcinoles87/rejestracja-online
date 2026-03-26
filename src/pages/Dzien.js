@@ -12,7 +12,7 @@ function Dzien({tablica,pracownicy,setTablica}) {
   
 
   const handleDelete = (item) =>{
-    
+    setTablica( (prevState) => prevState.filter( (e) => e.id !==item) )
 
   }
 
