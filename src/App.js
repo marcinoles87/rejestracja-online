@@ -2,98 +2,91 @@
 import './App.css';
 
 import { useEffect, useState } from 'react';
-import Header from './components/Header';
-import Main from './components/Main';
-import Footer from './components/Footer';
-import Info from './components/Info';
 
 
-import {Routes,Route} from 'react-router'
-import Rejestracja from './pages/Rejestracja';
-import Cennik from './pages/Cennik';
-import Firma from './pages/Firma'
-import Diagnostyka from './pages/Diagnostyka';
-import Nfz from './pages/Nfz';
-import Rehabilitacja from './pages/Rehabilitacja';
-import Zabiegi from './pages/Zabiegi';
-import Fizio from './pages/Fizio';
-import Masaz from './pages/Masaz';
-import Solux from './pages/Solux';
-import Specjalisci from './pages/Specjalisci';
-import Pokoje from './pages/Pokoje';
-import Dzien from './pages/Dzien';
-import Personel from './pages/Personel';
-import Grafik from './pages/Grafik';
 
 function App() {
 
-   const pracownicy = [
 
-      {id:'1',pracownik:'ola nowak',start:'8',koniec:'16'},
-      {id:'2',pracownik:'paweł krk',start:'16',koniec:'20'}
+  const [tablica,setTablica] = useState([])
+  const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
+
+  
+
+  
+
+  const handleDelete = (item) =>{
+    setTablica( (prevState) => prevState.filter( (e) => e.id !==item) )
+
+  }
+
+
+  const handleChange = (e) =>{
+
+    e.preventDefault()
     
-    ]
+    const {name,value} = e.target
+    setFormData({
+      ...formData,
+      [name]:value
+    })
 
-  const [tablica , setTablica] = useState(pracownicy)
+  }
 
-
-    console.log(pracownicy)
-
-    useEffect( () => {
-      
-      setTablica(pracownicy)
-
-    },[])
-
+  const handleAdd = (e) =>{
+    e.preventDefault()
+    setTablica( prevUsers => [...prevUsers,formData])
+    
+  }
 
    
 
   return (
 
-    <div className="container">
-
-    <Routes>
-      
-
-      <Route path='*' element={
-        <>  
-        
-          <Header></Header>
-          <Main></Main>
-          <Info></Info>
-          <Zabiegi></Zabiegi>
-          <Footer></Footer>
-          
-          
-        </>
+        <div className='dzien-container'>
 
      
- 
-      }/>
 
+      <div style={{ padding: '20px', fontFamily: 'Arial' }}>
+      <h1>Grafik Pracowników 📅</h1>
+      <ul>
+        {tablica.map((shift,index) => (
+          <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
+            <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec} godzin : {shift.koniec-shift.start}
+            <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
+          </li>
+        ))}
 
-      <Route path='/firma' element={<Firma></Firma>}></Route>
-      <Route path='/rejestracja' element={<Rejestracja></Rejestracja>}>
-        <Route path='grafik' element={<Grafik setTablica={setTablica}></Grafik>}></Route>
-        <Route path='pokoje' element={<Pokoje></Pokoje>}></Route>
-        <Route path='personel' element={<Personel></Personel>}></Route>
-      
-      </Route>
-      <Route path='/cennik' element={<Cennik></Cennik>}></Route>
-      <Route path='/diagnostyka' element={<Diagnostyka></Diagnostyka>}></Route>
-      <Route path='/nfz' element={<Nfz></Nfz>}></Route>
-      <Route path='/rehabilitacja' element={<Rehabilitacja></Rehabilitacja>}></Route>
-      <Route path='/fizio' element={<Fizio></Fizio>}></Route>
-      <Route path='/masaz' element={<Masaz></Masaz>}></Route>
-      <Route path='/solux' element={<Solux></Solux>}></Route>
-      <Route path='/dzien' element={<Dzien tablica={tablica} pracownicy={pracownicy} setTablica={setTablica}></Dzien>}></Route>
-      <Route path='/specjaliscie' element={<Specjalisci></Specjalisci>}></Route>
-    
-    </Routes>
-      
-      
-      
+      </ul>
     </div>
+
+   <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
+     <div>
+      <label>Pracownik</label>
+      <input type="text" name='pracownik' value={formData.pracownik} onChange={handleChange} placeholder='nazwa'></input>
+     </div>
+
+     <div>
+      <label>Start</label>
+      <input type="number" name='start'  value={formData.start} onChange={handleChange} placeholder='start zmiany'></input>
+     </div>
+    
+    <div>
+     <label>Koniec</label>
+      <input type="number" name='koniec'  value={formData.koniec} onChange={handleChange} placeholder='koniec zmiany'></input>
+     </div>
+
+     <button onClick={handleAdd}>Dodaj</button>
+
+   </form>
+
+        
+
+    </div>
+      
+      
+      
+
 
 
   
