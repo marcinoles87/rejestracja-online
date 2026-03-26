@@ -11,8 +11,8 @@ function Dzien({tablica,pracownicy,setTablica}) {
 
   
 
-  const handleDelete = (e) =>{
-    console.log(e.target)
+  const handleDelete = (item) =>{
+    
 
   }
 
@@ -27,7 +27,6 @@ function Dzien({tablica,pracownicy,setTablica}) {
       [name]:value
     })
 
-    console.log(formData)
   }
 
   const handleAdd = (e) =>{
@@ -46,12 +45,13 @@ function Dzien({tablica,pracownicy,setTablica}) {
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
       <h1>Grafik Pracowników 📅</h1>
       <ul>
-        {tablica.map((shift) => (
+        {tablica.map((shift,index) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
             <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec}
-            <button onClick={handleDelete}>Usun</button>
+            <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
+
       </ul>
     </div>
 
