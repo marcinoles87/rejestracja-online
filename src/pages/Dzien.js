@@ -47,7 +47,7 @@ function Dzien({tablica,pracownicy,setTablica}) {
       <ul>
         {tablica.map((shift,index) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
-            <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec}
+            <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec} godzin : {shift.koniec-shift.start}
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
