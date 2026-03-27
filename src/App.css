@@ -64,6 +64,11 @@
   color:white;
 }
 
+input{
+  text-align: center;
+  padding: 10px;
+}
+
 .dzien-container{
   display: flex;
   flex-direction: row;

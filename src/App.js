@@ -16,6 +16,9 @@ function App() {
     {name:'marcin'},
     {name:'iza'},
     {name:'kuba'},
+    {name:'ania'},
+    {name:'radek'},
+    {name:'wojtek'},
   ]
 
   let dniMiesiaca = []
@@ -66,9 +69,8 @@ function App() {
             <th>x</th>
           {pracownicy.map( (item,index) =>{
             return(
-              <th style={{padding:'20px'}}>
-                {item.name}
-              </th>
+              <th key={index} style={{padding:'20px'}}>{item.name}</th>
+
             )
           })}
           </tr>
@@ -76,15 +78,19 @@ function App() {
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
             return(
-              <>
-              <tr>
+              
+              <tr key={index}>
                 <td>{item}</td>
                 <td><input type="text"></input></td>
                 <td><input type="text"></input></td>
                 <td><input type="text"></input></td>
+                <td><input type="text"></input></td>
+                <td><input type="text"></input></td>
+                <td><input type="text"></input></td>
+              
               </tr>
               
-              </>
+              
             )
           })}
         </tbody>
