@@ -10,16 +10,24 @@ function App() {
 
   const [tablica,setTablica] = useState([])
   const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
-
   
 
-  
+  const pracownicy = [
+    {name:'marcin'},
+    {name:'iza'},
+    {name:'kuba'},
+  ]
 
+  let dniMiesiaca = []
+
+  for(let i=0; i < 31; i++){
+    dniMiesiaca.push(i+1)
+  }
+  
   const handleDelete = (item) =>{
     setTablica( (prevState) => prevState.filter( (e) => e.id !==item) )
 
   }
-
 
   const handleChange = (e) =>{
 
@@ -33,6 +41,7 @@ function App() {
 
   }
 
+
   const handleAdd = (e) =>{
     e.preventDefault()
     setTablica( prevUsers => [...prevUsers,formData])
@@ -43,12 +52,45 @@ function App() {
 
   return (
 
-        <div className='dzien-container'>
+        <div>
 
      
 
       <div style={{ padding: '20px', fontFamily: 'Arial' }}>
       <h1>Grafik Pracowników 📅</h1>
+
+      <table>
+        <thead>
+          
+          <tr>
+            <th>x</th>
+          {pracownicy.map( (item,index) =>{
+            return(
+              <th style={{padding:'20px'}}>
+                {item.name}
+              </th>
+            )
+          })}
+          </tr>
+        </thead>
+        <tbody>
+          {dniMiesiaca.map( (item,index) =>{
+            return(
+              <>
+              <tr>
+                <td>{item}</td>
+                <td><input type="text"></input></td>
+                <td><input type="text"></input></td>
+                <td><input type="text"></input></td>
+              </tr>
+              
+              </>
+            )
+          })}
+        </tbody>
+        
+      </table>
+
       <ul>
         {tablica.map((shift,index) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
