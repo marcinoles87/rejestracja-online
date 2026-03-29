@@ -10,6 +10,8 @@ function App() {
 
   const [tablica,setTablica] = useState([])
   const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
+  const [zmiana,setZmiana] = useState('')
+  const [godzina,setGodzina] = useState('')
   
 
   const pracownicy = [
@@ -51,6 +53,11 @@ function App() {
     
   }
 
+  const handleZmiana = (item) =>{
+    pracownicy[item].zmiana = godzina
+    console.log(pracownicy[item])
+  }
+
    
 
   return (
@@ -83,7 +90,10 @@ function App() {
             <th></th>
           {pracownicy.map( (item,index) =>{
             return(
+              <>
               <th key={index} style={{padding:'20px'}}>{item.name}</th>
+              <th>{item.godzina}</th>
+              </>
 
             )
           })}
@@ -138,6 +148,9 @@ function App() {
      <button onClick={handleAdd}>Dodaj</button>
 
    </form>
+
+    <input type="text" placeholder='podaj id pracownika' onChange={ (e) => setZmiana(e.target.value)}></input>
+    <input type="text" placeholder='podaj godziny' onChange={ () =>handleZmiana(zmiana)}></input>
 
         
 
