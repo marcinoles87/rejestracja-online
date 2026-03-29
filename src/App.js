@@ -53,9 +53,9 @@ function App() {
     
   }
 
-  const handleZmiana = (item) =>{
-    pracownicy[item].zmiana = godzina
-    console.log(pracownicy[item])
+  const handleZmiana = () =>{
+    pracownicy[zmiana].zmiana = godzina
+    console.log(pracownicy[zmiana])
   }
 
    
@@ -92,7 +92,6 @@ function App() {
             return(
               <>
               <th key={index} style={{padding:'20px'}}>{item.name}</th>
-              <th>{item.godzina}</th>
               </>
 
             )
@@ -100,13 +99,6 @@ function App() {
           </tr>
               <tr key={index}>
                 <td>{item}</td>
-                <td><input type="text"></input></td>
-                <td><input type="text"></input></td>
-                <td><input type="text"></input></td>
-                <td><input type="text"></input></td>
-                <td><input type="text"></input></td>
-                <td><input type="text"></input></td>
-              
               </tr>
               
               </>
@@ -150,7 +142,8 @@ function App() {
    </form>
 
     <input type="text" placeholder='podaj id pracownika' onChange={ (e) => setZmiana(e.target.value)}></input>
-    <input type="text" placeholder='podaj godziny' onChange={ () =>handleZmiana(zmiana)}></input>
+    <input type="text" placeholder='podaj godziny' onChange={ (e) =>setGodzina(e.target.value)}></input>
+    <button onClick={handleZmiana}>dodaj zmiane</button>
 
         
 
