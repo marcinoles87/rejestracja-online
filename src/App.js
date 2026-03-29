@@ -65,7 +65,7 @@ function App() {
       <table>
         <thead>
           
-          <tr>
+          {/* <tr>
             <th>x</th>
           {pracownicy.map( (item,index) =>{
             return(
@@ -73,12 +73,21 @@ function App() {
 
             )
           })}
-          </tr>
+          </tr> */}
         </thead>
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
             return(
-              
+              <>
+              <tr>
+            <th></th>
+          {pracownicy.map( (item,index) =>{
+            return(
+              <th key={index} style={{padding:'20px'}}>{item.name}</th>
+
+            )
+          })}
+          </tr>
               <tr key={index}>
                 <td>{item}</td>
                 <td><input type="text"></input></td>
@@ -90,9 +99,10 @@ function App() {
               
               </tr>
               
-              
+              </>
             )
           })}
+        
         </tbody>
         
       </table>
