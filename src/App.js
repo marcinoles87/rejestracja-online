@@ -25,7 +25,7 @@ function App() {
 
   let dniMiesiaca = []
 
-  for(let i=0; i < 31; i++){
+  for(let i=0; i < 4; i++){
     dniMiesiaca.push(i+1)
   }
   
@@ -90,7 +90,7 @@ function App() {
             return(
               <>
               <tr>
-                <th></th>
+                <th>{item}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
               
@@ -104,9 +104,9 @@ function App() {
             )
           })}
           </tr>
-              <tr key={index}>
+              {/* <tr key={index}>
                 <td>{item}</td>
-              </tr>
+              </tr> */}
               
             </>
             )
