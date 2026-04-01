@@ -11,7 +11,8 @@ function App() {
   const [tablica,setTablica] = useState([])
   const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
   const [zmiana,setZmiana] = useState('')
-  const [godzina,setGodzina] = useState('')
+  const [godzinaStart,setGodzinaStart] = useState('')
+  const [godzinaKoniec,setGodzinaKoniec] = useState('')
   
 
   const pracownicy = [
@@ -55,7 +56,9 @@ function App() {
 
   const handleZmiana = () =>{
     console.log(zmiana)
-    pracownicy[zmiana].zmiana = godzina
+    pracownicy[zmiana].zmianaStart = godzinaStart
+    pracownicy[zmiana].zmianaKoniec = godzinaKoniec
+    pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
     console.log(pracownicy[zmiana])
   }
 
@@ -96,7 +99,8 @@ function App() {
               
                       <th key={index} style={{padding:'20px'}} onChange={ () => setZmiana(index)}>
                         
-                        <input type="text" onChange={ (e) =>setGodzina(e.target.value) } ></input>
+                        <input type="text" onChange={ (e) =>setGodzinaStart(e.target.value)} placeholder='start' ></input>
+                        <input type="text" onChange={ (e) =>setGodzinaKoniec(e.target.value)} placeholder='koniec' ></input>
                         <button onClick={handleZmiana}>Dodaj zmiane</button>
                       </th>
               
@@ -149,7 +153,7 @@ function App() {
    </form>
 
     <input type="text" placeholder='podaj id pracownika' onChange={ (e) => setZmiana(e.target.value)}></input>
-    <input type="text" placeholder='podaj godziny' onChange={ (e) =>setGodzina(e.target.value)}></input>
+    {/* <input type="text" placeholder='podaj godziny' onChange={ (e) =>setGodzina(e.target.value)}></input> */}
     <button onClick={handleZmiana}>dodaj zmiane</button>
 
         
