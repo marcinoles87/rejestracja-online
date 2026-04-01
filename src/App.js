@@ -94,9 +94,9 @@ function App() {
                   {pracownicy.map( (item,index) =>{
                      return(
               
-                      <th key={index} style={{padding:'20px'}}>
-                        <input type="text" onChange={ () => setZmiana(index)}></input>
-                        <input type="text" onChange={ (e) =>setGodzina(e.target.value) }></input>
+                      <th key={index} style={{padding:'20px'}} onChange={ () => setZmiana(index)}>
+                        
+                        <input type="text" onChange={ (e) =>setGodzina(e.target.value) } ></input>
                         <button onClick={handleZmiana}>Dodaj zmiane</button>
                       </th>
               
