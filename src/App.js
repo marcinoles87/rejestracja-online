@@ -54,6 +54,7 @@ function App() {
   }
 
   const handleZmiana = () =>{
+    console.log(zmiana)
     pracownicy[zmiana].zmiana = godzina
     console.log(pracownicy[zmiana])
   }
@@ -72,27 +73,33 @@ function App() {
       <table>
         <thead>
           
-          {/* <tr>
+           <tr>
             <th>x</th>
           {pracownicy.map( (item,index) =>{
             return(
-              <th key={index} style={{padding:'20px'}}>{item.name}</th>
+              <th key={index} style={{padding:'20px'}}>
+                {item.name}
+                </th>
 
             )
           })}
-          </tr> */}
+          </tr> 
         </thead>
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
             return(
               <>
               <tr>
-            <th></th>
-          {pracownicy.map( (item,index) =>{
-            return(
-              <>
-              <th key={index} style={{padding:'20px'}}>{item.name}</th>
-              </>
+                <th></th>
+                  {pracownicy.map( (item,index) =>{
+                     return(
+              
+                      <th key={index} style={{padding:'20px'}}>
+                        <input type="text" onChange={ () => setZmiana(index)}></input>
+                        <input type="text" onChange={ (e) =>setGodzina(e.target.value) }></input>
+                        <button onClick={handleZmiana}>Dodaj zmiane</button>
+                      </th>
+              
 
             )
           })}
@@ -101,7 +108,7 @@ function App() {
                 <td>{item}</td>
               </tr>
               
-              </>
+            </>
             )
           })}
         
