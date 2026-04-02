@@ -15,7 +15,7 @@ function App() {
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
   
 
-  const pracownicy = [
+  let pracownicy = [
     {name:'marcin'},
     {name:'iza'},
     {name:'kuba'},
@@ -55,11 +55,15 @@ function App() {
   }
 
   const handleZmiana = () =>{
+    console.log(pracownicy)
     console.log(zmiana)
+    console.log(pracownicy[zmiana])
     pracownicy[zmiana].zmianaStart = godzinaStart
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
-    console.log(pracownicy[zmiana])
+    setTablica(pracownicy)
+    setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
+
   }
 
    
@@ -99,8 +103,8 @@ function App() {
               
                       <th key={index} style={{padding:'20px'}} onChange={ () => setZmiana(index)}>
                         
-                        <input type="text" onChange={ (e) =>setGodzinaStart(e.target.value)} placeholder='start' ></input>
-                        <input type="text" onChange={ (e) =>setGodzinaKoniec(e.target.value)} placeholder='koniec' ></input>
+                        <input type="number" onChange={ (e) =>setGodzinaStart(e.target.value)} placeholder='start' ></input>
+                        <input type="number" onChange={ (e) =>setGodzinaKoniec(e.target.value)} placeholder='koniec' ></input>
                         <button onClick={handleZmiana}>Dodaj zmiane</button>
                       </th>
               
@@ -108,9 +112,7 @@ function App() {
             )
           })}
           </tr>
-              {/* <tr key={index}>
-                <td>{item}</td>
-              </tr> */}
+           
               
             </>
             )
@@ -123,7 +125,7 @@ function App() {
       <ul>
         {tablica.map((shift,index) => (
           <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
-            <strong>{shift.pracownik}</strong> : {shift.start} — {shift.koniec} godzin : {shift.koniec-shift.start}
+            <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart}
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
