@@ -15,6 +15,10 @@ function App() {
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
   
 
+  useEffect( () => {
+    setTablica(tablica)
+  },[])
+
   let pracownicy = [
     {name:'marcin'},
     {name:'iza'},
@@ -26,7 +30,7 @@ function App() {
 
   let dniMiesiaca = []
 
-  for(let i=0; i < 4; i++){
+  for(let i=0; i < 2; i++){
     dniMiesiaca.push(i+1)
   }
   
@@ -55,14 +59,17 @@ function App() {
   }
 
   const handleZmiana = () =>{
+
     console.log(pracownicy)
     console.log(zmiana)
     console.log(pracownicy[zmiana])
     pracownicy[zmiana].zmianaStart = godzinaStart
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
-    setTablica(pracownicy)
+    console.log(pracownicy[zmiana])
+    
     setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
+    console.log(tablica)
 
   }
 
@@ -95,8 +102,8 @@ function App() {
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
             return(
-              <>
-              <tr>
+              
+              <tr key={index}>
                 <th>{item}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
@@ -109,12 +116,12 @@ function App() {
                       </th>
               
 
-            )
-          })}
-          </tr>
+                )
+              })}
+              </tr>
            
               
-            </>
+            
             )
           })}
         
@@ -124,7 +131,7 @@ function App() {
 
       <ul>
         {tablica.map((shift,index) => (
-          <li key={shift.id} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
+          <li key={index} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
             <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart}
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
