@@ -13,6 +13,7 @@ function App() {
   const [zmiana,setZmiana] = useState('')
   const [godzinaStart,setGodzinaStart] = useState('')
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
+  const [dzien,setDniMiesiaca] = useState([])
   
 
   useEffect( () => {
@@ -28,11 +29,12 @@ function App() {
     {name:'wojtek'},
   ]
 
-  let dniMiesiaca = []
+  let dniMiesiaca =[]
 
   for(let i=0; i < 2; i++){
     dniMiesiaca.push(i+1)
   }
+
 
   useEffect( () =>{
     console.log('wartosc tablicy to :' ,tablica)
@@ -135,7 +137,7 @@ function App() {
       <ul>
         {tablica.map((shift,index) => (
           <li key={index} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
-            <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart}
+            <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart} /
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
