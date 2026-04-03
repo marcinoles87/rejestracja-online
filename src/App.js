@@ -13,6 +13,7 @@ function App() {
   const [zmiana,setZmiana] = useState('')
   const [godzinaStart,setGodzinaStart] = useState('')
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
+  const [dzienMiesiaca , setDzienMiesiaca] = useState([])
   
 
   useEffect( () => {
@@ -31,8 +32,16 @@ function App() {
   let dniMiesiaca = []
 
   for(let i=0; i < 2; i++){
-    dniMiesiaca.push(i+1)
+    dzienMiesiaca.push({dzien:i+1})
   }
+
+  useEffect( () =>{
+        // setDzienMiesiaca( prevState => [...prevState,{dzien:dniMiesiaca[i]}])
+
+
+  },[])
+
+  console.log(dzienMiesiaca)
   
   const handleDelete = (item) =>{
     setTablica( (prevState) => prevState.filter( (e) => e.id !==item) )
@@ -100,11 +109,11 @@ function App() {
           </tr> 
         </thead>
         <tbody>
-          {dniMiesiaca.map( (item,index) =>{
+          {dzienMiesiaca.map( (item,index) =>{
             return(
               
               <tr key={index}>
-                <th>{item}</th>
+                <th>{item.dzien}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
               
