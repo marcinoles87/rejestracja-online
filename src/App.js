@@ -28,7 +28,7 @@ function App() {
   console.log(dniMiesiaca)
 
   useEffect( () => {
-    setTablica(dniMiesiaca)
+    // setTablica(dniMiesiaca)
   },[])
 
 
