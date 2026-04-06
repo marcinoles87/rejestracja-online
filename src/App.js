@@ -15,25 +15,31 @@ function App() {
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
   const [dzien,setDniMiesiaca] = useState([])
   
+   let dniMiesiaca =[
+    {dzien:1},
+    {dzien:2},
+   ]
+
+  // for(let i=0; i < 2; i++){
+  //   dniMiesiaca.push(i+1)
+  // }
 
   useEffect( () => {
     setTablica(tablica)
   },[])
+
 
   let pracownicy = [
     {name:'marcin'},
     {name:'iza'},
     {name:'kuba'},
     {name:'ania'},
-    {name:'radek'},
-    {name:'wojtek'},
+  
   ]
 
-  let dniMiesiaca =[]
+ 
 
-  for(let i=0; i < 2; i++){
-    dniMiesiaca.push(i+1)
-  }
+
 
 
   useEffect( () =>{
@@ -73,8 +79,10 @@ function App() {
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
     
+    setDniMiesiaca([dniMiesiaca])
+    console.log('dzien miesiaca',dzien)
+    
     setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
-    console.log(tablica)
 
   }
 
@@ -141,7 +149,6 @@ function App() {
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
-
       </ul>
     </div>
 
