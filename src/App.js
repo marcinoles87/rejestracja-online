@@ -25,11 +25,11 @@ function App() {
     dniMiesiaca.push([])
   }
 
-  console.log(dniMiesiaca)
 
   useEffect( () => {
-    // setTablica(dniMiesiaca)
+    setTablica(dniMiesiaca)
   },[])
+
 
 
   let pracownicy = [
@@ -44,7 +44,8 @@ function App() {
 
   useEffect( () =>{
     console.log('wartosc tablicy to :' ,tablica)
-    console.log('wartosc dni to :' , dzien)
+    console.log('wartosc dni to :' ,dzien)
+    console.log('wartosc zmiany :' ,zmiana)
   },[tablica])
   
   const handleDelete = (item) =>{
@@ -61,9 +62,8 @@ function App() {
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
     
-    setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
     setDniMiesiaca( (prevDzien) => [...prevDzien,pracownicy])
-
+    setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
 
   }
 
@@ -98,12 +98,12 @@ function App() {
 
             return(
               
-              <tr key={index}>
+              <tr key={index} onChange={ () => setZmiana(index)}>
                 <th>{item}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
               
-                      <th key={index} style={{padding:'20px'}} onChange={ () => setZmiana(index)}>
+                      <th key={index} style={{padding:'20px'}} >
                         
                         <input type="number" onChange={ (e) =>setGodzinaStart(e.target.value)} placeholder='start' ></input>
                         <input type="number" onChange={ (e) =>setGodzinaKoniec(e.target.value)} placeholder='koniec' ></input>
