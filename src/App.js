@@ -9,23 +9,26 @@ function App() {
 
 
   const [tablica,setTablica] = useState([])
-  const [formData,setFormData] = useState({pracownik:'',start:'',koniec:''})
   const [zmiana,setZmiana] = useState('')
   const [godzinaStart,setGodzinaStart] = useState('')
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
   const [dzien,setDniMiesiaca] = useState([])
   
-   let dniMiesiaca =[
-    {dzien:1},
-    {dzien:2},
-   ]
+  //  let dniMiesiaca =[
+  //   {dzien:1},
+  //   {dzien:2},
+  //  ]
 
-  // for(let i=0; i < 2; i++){
-  //   dniMiesiaca.push(i+1)
-  // }
+  let dniMiesiaca = []
+
+  for(let i=0; i < 2; i++){
+    dniMiesiaca.push([])
+  }
+
+  console.log(dniMiesiaca)
 
   useEffect( () => {
-    setTablica(tablica)
+    setTablica(dniMiesiaca)
   },[])
 
 
@@ -37,13 +40,11 @@ function App() {
   
   ]
 
- 
-
-
 
 
   useEffect( () =>{
     console.log('wartosc tablicy to :' ,tablica)
+    console.log('wartosc dni to :' , dzien)
   },[tablica])
   
   const handleDelete = (item) =>{
@@ -51,38 +52,18 @@ function App() {
 
   }
 
-  const handleChange = (e) =>{
 
-    e.preventDefault()
-    
-    const {name,value} = e.target
-    setFormData({
-      ...formData,
-      [name]:value
-    })
-
-  }
-
-
-  const handleAdd = (e) =>{
-    e.preventDefault()
-    setTablica( prevUsers => [...prevUsers,formData])
-    
-  }
 
   const handleZmiana = () =>{
 
-    console.log(pracownicy)
-    console.log(zmiana)
-    console.log(pracownicy[zmiana])
+    
     pracownicy[zmiana].zmianaStart = godzinaStart
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
     
-    setDniMiesiaca([dniMiesiaca])
-    console.log('dzien miesiaca',dzien)
-    
     setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
+    setDniMiesiaca( (prevDzien) => [...prevDzien,pracownicy])
+
 
   }
 
@@ -114,6 +95,7 @@ function App() {
         </thead>
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
+
             return(
               
               <tr key={index}>
@@ -144,38 +126,16 @@ function App() {
 
       <ul>
         {tablica.map((shift,index) => (
+          
           <li key={index} style={{ marginBottom: '10px', listStyle: 'none', border: '1px solid #ddd', padding: '10px' }}>
-            <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart} /
+            <strong>{shift.name}</strong> : {shift.zmianaStart} — {shift.zmianaKoniec} godzin : {shift.zmianaKoniec-shift.zmianaStart} / dzien :{}
             <button onClick={ () => { handleDelete(shift.id)}}>Usun</button>
           </li>
         ))}
       </ul>
     </div>
 
-   <form action="" style={{ marginBottom: '20px', padding: '15px', background: '#f9f9f9' }}>
-     <div>
-      <h1>Dodaj pracownika do zmiany</h1>
-      <label>Pracownik</label>
-      <input type="text" name='pracownik' value={formData.pracownik} onChange={handleChange} placeholder='nazwa'></input>
-     </div>
-
-     <div>
-      <label>Start</label>
-      <input type="number" name='start'  value={formData.start} onChange={handleChange} placeholder='start zmiany'></input>
-     </div>
-    
-    <div>
-     <label>Koniec</label>
-      <input type="number" name='koniec'  value={formData.koniec} onChange={handleChange} placeholder='koniec zmiany'></input>
-     </div>
-
-     <button onClick={handleAdd}>Dodaj</button>
-
-   </form>
-
-    <input type="text" placeholder='podaj id pracownika' onChange={ (e) => setZmiana(e.target.value)}></input>
-    {/* <input type="text" placeholder='podaj godziny' onChange={ (e) =>setGodzina(e.target.value)}></input> */}
-    <button onClick={handleZmiana}>dodaj zmiane</button>
+ 
 
         
 
