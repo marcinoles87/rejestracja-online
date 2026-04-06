@@ -98,12 +98,12 @@ function App() {
 
             return(
               
-              <tr key={index} onChange={ () => setZmiana(index)}>
+              <tr key={index} >
                 <th>{item}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
               
-                      <th key={index} style={{padding:'20px'}} >
+                      <th key={index} style={{padding:'20px'}} onChange={ () => setZmiana(index)}>
                         
                         <input type="number" onChange={ (e) =>setGodzinaStart(e.target.value)} placeholder='start' ></input>
                         <input type="number" onChange={ (e) =>setGodzinaKoniec(e.target.value)} placeholder='koniec' ></input>
