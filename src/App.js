@@ -13,6 +13,7 @@ function App() {
   const [godzinaStart,setGodzinaStart] = useState('')
   const [godzinaKoniec,setGodzinaKoniec] = useState('')
   const [dzien,setDniMiesiaca] = useState([])
+  const [indexDnia,setIndex] =useState()
   
   //  let dniMiesiaca =[
   //   {dzien:1},
@@ -45,7 +46,6 @@ function App() {
   useEffect( () =>{
     console.log('wartosc tablicy to :' ,tablica)
     console.log('wartosc dni to :' ,dzien)
-    console.log('wartosc zmiany :' ,zmiana)
   },[tablica])
   
   const handleDelete = (item) =>{
@@ -57,13 +57,16 @@ function App() {
 
   const handleZmiana = () =>{
 
-    
+    console.log(zmiana)
+    console.log(dniMiesiaca)
+    console.log(indexDnia)
     pracownicy[zmiana].zmianaStart = godzinaStart
     pracownicy[zmiana].zmianaKoniec = godzinaKoniec
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
+    console.log(pracownicy[zmiana])
     
     setDniMiesiaca( (prevDzien) => [...prevDzien,pracownicy])
-    setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
+    // setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
 
   }
 
@@ -96,9 +99,11 @@ function App() {
         <tbody>
           {dniMiesiaca.map( (item,index) =>{
 
+            
+
             return(
               
-              <tr key={index} >
+              <tr key={index} onChange={ () => setIndex(index)}>
                 <th>{item}</th>
                   {pracownicy.map( (item,index) =>{
                      return(
