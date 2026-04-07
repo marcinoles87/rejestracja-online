@@ -65,8 +65,10 @@ function App() {
     pracownicy[zmiana].godziny = godzinaKoniec-godzinaStart
     console.log(pracownicy[zmiana])
     
+    dniMiesiaca[indexDnia].push(pracownicy[zmiana])
     setDniMiesiaca( (prevDzien) => [...prevDzien,pracownicy])
     // setTablica(prevTablica =>[...prevTablica,pracownicy[zmiana]])
+    console.log(dniMiesiaca)
 
   }
 
